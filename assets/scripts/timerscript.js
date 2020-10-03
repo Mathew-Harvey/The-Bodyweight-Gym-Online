@@ -8,10 +8,8 @@ var centiSecond = document.getElementById("centiSecond")
 
 $(document).ready(function() {
     $('#showTimer').click (function() {
-        console.log("yyyeeeees")
-        $("#timerEl").toggleClass( "timer" );
+             $("#timerEl").toggleClass( "timer" );
     })
-
 });
 
 function startSW() {
@@ -68,3 +66,29 @@ function resetSW() {
 
 }
  
+// Metronome beeps at 1 second intervals
+
+var snd1 = new Audio("./assets/audio/Low_Woodblock.wav");
+
+function beep2() { 
+  snd1.play();
+}
+
+$(document).ready(function() {
+    $('#metronomeStart').click (function() {
+          beepInt = setInterval(beep2, 1000)   
+          $("#metronomeStart").attr({'disabled':'disabled'}); 
+          $("#metronomeStop").removeAttr('disabled');
+    })
+});
+
+$(document).ready(function() {
+    $('#metronomeStop').click (function() {
+        console.log("stop")
+          clearInterval(beepInt);   
+          $("#metronomeStop").attr({'disabled':'disabled'}); 
+          $("#metronomeStart").removeAttr('disabled');
+    })
+});
+
+
