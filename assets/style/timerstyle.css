@@ -1,0 +1,21 @@
+
+
+.timer {
+    display: none;
+}
+
+.countdown{
+    font-size: 40px;
+    font-weight: 700
+}
+
+.countdown span {
+    display: inline-block;
+    min-width: 100px;
+}
+
+button{
+    padding: 12px 25px;
+    font-size: 20px;
+
+}
