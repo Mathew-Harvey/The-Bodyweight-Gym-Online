@@ -1,5 +1,5 @@
 // The video objects
-const $theVideos = {
+$theVideos = {
 
     // Video 1
     0: {
