@@ -3,9 +3,12 @@ $videoDisplayEl = $('#video-display');
 $workoutFiltersEl = $('#theWorkouts');
 $coachFiltersEl = $('#theCoaches');
 
-function checkWorkout(which) {
+// Current Filter Selections
+$workoutFilterSelected = "All";
+$coachFilterSelected = "All";
 
-    console.log("Checking Workout: " + which);
+// Function to check and return the workouts colour
+function checkWorkout(which) {
 
     for (var w = 0; w < Object.keys($theWorkouts).length; w++) {
 
@@ -19,9 +22,8 @@ function checkWorkout(which) {
     return "";
 }
 
+// Function to check and return the coaches colour
 function checkCoach(which) {
-
-    console.log("Checking Coach: " + which);
 
     for (var c = 0; c < Object.keys($theCoaches).length; c++) {
 
@@ -35,6 +37,7 @@ function checkCoach(which) {
     return "";
 }
 
+// Function to display the current video selection
 function displayVideos() {
 
     console.log('[DISPLAY VIDEOS]');
@@ -98,8 +101,9 @@ function displayVideos() {
 
 }
 
-function displayWorkouts(){
-    
+// Function to display the workout filters
+function displayWorkouts() {
+
     console.log("[DISPLAY WORKOUT FILTERS]");
 
     // Clear Current Selection
@@ -119,14 +123,24 @@ function displayWorkouts(){
     var $newDefault = $('<span>');
     $newDefault.attr("class", "tag is-black");
     $newDefault.text("All");
+    // Check if Selected
+    if ($workoutFilterSelected != "All") {
+        $newDefault.addClass("is-light");
+    }
+    // Append to div
     $newDivHolder.append($newDefault);
 
     for (var w = 0; w < Object.keys($theWorkouts).length; w++) {
 
         // Add the Filters
         var $newTag = $('<span>');
-        $newTag.attr("class", "tag "+checkWorkout($theWorkouts[w].name));
+        $newTag.attr("class", "tag " + checkWorkout($theWorkouts[w].name));
         $newTag.text($theWorkouts[w].name);
+        // Check if Selected
+        if ($workoutFilterSelected != $theWorkouts[w].name) {
+            $newTag.addClass("is-light");
+        }
+        // Append to div
         $newDivHolder.append($newTag);
     }
 
@@ -135,7 +149,8 @@ function displayWorkouts(){
 
 }
 
-function displayCoaches(){
+// Function to display the coach filters
+function displayCoaches() {
 
     console.log("[DISPLAY COACH FILTERS]");
 
@@ -156,31 +171,37 @@ function displayCoaches(){
     var $newDefault = $('<span>');
     $newDefault.attr("class", "tag is-black");
     $newDefault.text("All");
+    // Check if Selected
+    if ($coachFilterSelected != "All") {
+        $newDefault.addClass("is-light");
+    }
+    // Append to div
     $newDivHolder.append($newDefault);
 
     for (var c = 0; c < Object.keys($theCoaches).length; c++) {
 
         // Add the Filters
         var $newTag = $('<span>');
-        $newTag.attr("class", "tag "+checkCoach($theCoaches[c].name));
+        $newTag.attr("class", "tag " + checkCoach($theCoaches[c].name));
         $newTag.text($theCoaches[c].name);
+        // Check if Selected
+        if ($coachFilterSelected != $theCoaches[c].name) {
+            $newTag.addClass("is-light");
+        }
+        // Append to div
         $newDivHolder.append($newTag);
     }
 
     // Add the current filters to the div
     $coachFiltersEl.append($newDivHolder);
-
-    // <div id="tags-coach" class="tags are-medium mb-0 mt-2">
-    //                     <span class="tag is-white">Coaches:</span>
-    //                     <span class="tag is-light">All</span>
-    //                     <span class="tag is-primary is-light">Corey</span>
-    //                     <span class="tag is-link is-light">Maisie</span>
-    //                     <span class="tag is-info is-light">Mikhail</span>
-    //                     <span class="tag is-success is-light">Ray</span>
-    //                     <span class="tag is-warning is-light">Oscar</span>
-    //                 </div>
 }
 
-displayWorkouts();
-displayCoaches();
-displayVideos();
+// Check the document is ready
+$(document).ready(function () {
+
+    // Display the default filters and video
+    displayWorkouts();
+    displayCoaches();
+    displayVideos();
+
+})
