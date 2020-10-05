@@ -32,6 +32,26 @@
         <div class="footer"></div>
     </div>
 
+    <!-- Timer Overlay -->
+    <div id="timerEl" class = "shownTimer" style="top: 319px; left: 2px;"> 
+
+        <div id="mydivheader">Click here to move</div>
+        <div class="countdown">
+            <span id="minutes">0</span>:<span id="second">00</span>:<span id="centiSecond">00</span>
+        </div>
+        <br>
+        <div>
+            <button id="startCount" onclick="startSW()" class="button is-rounded">Play</button>
+            <button id="pauseCount" onclick="pauseSW()" class="button is-rounded" disabled>Pause</button>
+            <button id="resetCount" onclick="resetSW()" class="button is-rounded" disabled>Reset</button>
+        </div>
+    </div>
+    <!-- Timer and metronome buttons  -->
+    <button id="showTimer" class="button is-small">Show Timer</button>
+    <button id="metronomeStart" class="button is-small">Start Metronome</button>
+ 
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script src="/assets/script.js"></script>
