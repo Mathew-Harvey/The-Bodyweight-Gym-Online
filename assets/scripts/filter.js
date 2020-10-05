@@ -7,42 +7,6 @@ $coachFiltersEl = $('#theCoaches');
 $workoutFilterSelected = "All";
 $coachFilterSelected = "All";
 
-// Watched Videos Array
-$watchedVideos = [];
-
-// Liked Videos Array
-$likedVideos = [];
-
-// Function to check and return the workouts colour
-function checkWorkout(which) {
-
-    for (var w = 0; w < Object.keys($theWorkouts).length; w++) {
-
-        if ($theWorkouts[w].name === which) {
-            // Return the Coaches Colour Choice
-            return $theWorkouts[w].colour;
-        }
-    }
-
-    // Default to no colour if not found
-    return "";
-}
-
-// Function to check and return the coaches colour
-function checkCoach(which) {
-
-    for (var c = 0; c < Object.keys($theCoaches).length; c++) {
-
-        if ($theCoaches[c].name === which) {
-            // Return the Coaches Colour Choice
-            return $theCoaches[c].colour;
-        }
-    }
-
-    // Default to no colour if not found
-    return "";
-}
-
 // Function to check your selected filters versus the videos
 function checkSelection(whichCoach, whichWorkout) {
     
@@ -100,6 +64,7 @@ function displayVideos() {
             // Create the Thumbnail Div
             var $newOverlay = $('<div>');
             $newOverlay.attr("class","overlay");
+            $newOverlay.data("video",v);
             // Create the Play Icon Div
             $newIcon = $('<div>');
             $newIcon.html('<i class="fas fa-play playicon"></i>');
@@ -303,18 +268,6 @@ function displayCoaches() {
     $coachFiltersEl.append($newDivHolder);
 }
 
-function heartVideo(which){
-    
-    var $arrayPos = $.inArray(which, $likedVideos);
-
-    if ($arrayPos == -1){
-        $likedVideos.push(which);
-    }
-    else {
-        $likedVideos.splice($arrayPos,1);
-    }
-}
-
 // Check the document is ready
 $(document).ready(function () {
 
@@ -363,6 +316,14 @@ $(document).ready(function () {
 
         // Display the videos again
         displayVideos();
+
+    })
+    // Videos
+    $(document).on("click", ".overlay", function () {
+
+        // Retrieve the Filter Data
+        var $whichVideo = $(this).data("video");
+        window.location = 'player.html?video=' + $whichVideo;        
 
     })
 })
