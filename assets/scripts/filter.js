@@ -121,11 +121,17 @@ function displayVideos() {
 
             // Create the Heart Icon
             var $newHeart = $("<span>");
-            $newHeart.attr("class", "tag");
+            $newHeart.attr("class", "tag heart");
+            $newHeart.css('cursor', 'pointer');
+            $newHeart.data("video", v);
             // Has the Video been Liked?
-            // $newHeart.attr("class","fas fa-heart");
             var $newIcon = $('<i>');            
-            $newIcon.attr("class", "far fa-heart");
+            if ($.inArray(v, $likedVideos) == -1){
+                $newIcon.attr("class", "far fa-heart");
+            }
+            else {
+                $newIcon.attr("class","fas fa-heart");
+            }
             $newHeart.append($newIcon);
 
             // Create the Viewed Icon
@@ -287,6 +293,18 @@ function displayCoaches() {
     $coachFiltersEl.append($newDivHolder);
 }
 
+function heartVideo(which){
+    
+    var $arrayPos = $.inArray(which, $likedVideos);
+
+    if ($arrayPos == -1){
+        $likedVideos.push(which);
+    }
+    else {
+        $likedVideos.splice($arrayPos,1);
+    }
+}
+
 // Check the document is ready
 $(document).ready(function () {
 
@@ -321,6 +339,19 @@ $(document).ready(function () {
 
         // Display the changed filters
         displayCoaches();
+        displayVideos();
+
+    })
+    // Hearts
+    $(document).on("click", ".heart", function () {
+
+        // Retrieve the Filter Data
+        var $whichVideo = $(this).data("video");
+
+        // Add a heart to a video
+        heartVideo($whichVideo);
+
+        // Display the videos again
         displayVideos();
 
     })
