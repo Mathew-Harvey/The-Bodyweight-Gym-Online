@@ -98,8 +98,15 @@ function displayVideos() {
             $newVidHolder.attr("class", "column is-3");
 
             // Create the Thumbnail
+            var $newOverlay = $('<div>');
+            $newOverlay.attr("class","overlay");
+
             var $newThumb = $('<img>');
+            $newThumb.attr("class","video-buttons");
             $newThumb.attr("src", $thisScreenshot);
+            $newThumb.css("cursor","pointer");           
+    
+            $newOverlay.append($newThumb);
 
             // Create the Tags beneath the video
             var $newTags = $('<div>');
@@ -145,7 +152,7 @@ function displayVideos() {
 
             // Append Everything
             $newTags.append($newWorkout, $newCoach, $newHeart, $newViewed);
-            $newVidHolder.append($newThumb, $newTags);
+            $newVidHolder.append($newOverlay, $newTags);
             $newDivHolder.append($newVidHolder);
 
         }

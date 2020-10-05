@@ -1,0 +1,11 @@
+.overlay {
+    background-color: #000000;
+    height: auto;
+    max-width: 100%;
+    line-height: 0;
+    margin-bottom: 5px;
+}
+
+.overlay:hover img {
+    opacity: 0.8;
+}
