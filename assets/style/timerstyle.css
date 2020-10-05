@@ -1,5 +1,5 @@
-/* DELETE THIS BACKGROUND - JUST FOR SHOWING TIMER TRANSPARENCY*/
 
+<<<<<<< HEAD
 body {
     /*background-image: url(../img/temp.jpg);*/
     background-repeat: no-repeat;
@@ -8,6 +8,9 @@ body {
 }
 
 .timer {
+=======
+.shownTimer {
+>>>>>>> bf637d7528da9952482e7dd40ad76d4986ccc64f
     display: none;
 }
 
@@ -43,4 +46,8 @@ button {
     background-color: #2196F3;
     color: #fff;
     opacity: 0.75;
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> bf637d7528da9952482e7dd40ad76d4986ccc64f
