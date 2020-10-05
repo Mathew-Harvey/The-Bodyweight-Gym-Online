@@ -64,6 +64,9 @@ function displayVideos() {
     var $newDivHolder = $('<div>');
     $newDivHolder.attr("class", "columns is-multiline");
 
+    // Check Video Count
+    var $videoCount = 0;
+
     for (var v = 0; v < Object.keys($theVideos).length; v++) {
 
         var $thisWorkout = $theVideos[v].tags[0];
@@ -71,6 +74,9 @@ function displayVideos() {
         var $thisScreenshot = $theVideos[v].screenshot;
 
         if (checkSelection($thisCoach, $thisWorkout)) {
+
+            // Increase the Video Count
+            $videoCount++;
 
             // Create the Individual Video Holder
             var $newVidHolder = $('<div>');
@@ -117,6 +123,32 @@ function displayVideos() {
             $newDivHolder.append($newVidHolder);
 
         }
+    }
+
+    // Check for zero videos
+    if ($videoCount === 0){
+
+        // Create the Individual Video Holder
+        var $newVidHolder = $('<div>');
+        $newVidHolder.attr("class", "column is-3");
+
+        // Create the Thumbnail
+        var $newThumb = $('<img>');
+        $newThumb.attr("src", "./assets/img/previews/prev0.png");
+
+        // Create the Tags beneath the video
+        var $newTags = $('<div>');
+        $newTags.attr("class", "tags are-medium");
+
+        // Create the Zero Tag
+        var $newZero = $('<span>');
+        $newZero.attr("class", "tag");
+        $newZero.text("No Videos Available");
+
+        // Append Everything
+        $newTags.append($newZero);
+        $newVidHolder.append($newThumb, $newTags);
+        $newDivHolder.append($newVidHolder);
     }
 
     // Add the current video selection to the div
