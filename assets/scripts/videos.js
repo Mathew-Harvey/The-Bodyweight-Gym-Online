@@ -1,4 +1,4 @@
-// The video objects
+// The video object
 const $theVideos = {
 
     // Video 1
