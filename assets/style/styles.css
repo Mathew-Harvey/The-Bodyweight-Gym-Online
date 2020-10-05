@@ -1,0 +1,12 @@
+.modal-login .modal-content {
+    background-color: white;
+    padding-bottom: 40px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}

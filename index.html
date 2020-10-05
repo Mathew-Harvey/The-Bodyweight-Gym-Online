@@ -2,51 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/style/styles.css" />
-    <link rel="stylesheet" href="./assets/style/timerstyle.css" />
-    <title>The Bodyweight Gym Online</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/style/styles.css" />
+  <link rel="stylesheet" href="./assets/style/timerstyle.css" />
+  <title>The Bodyweight Gym Online</title>
 </head>
 
 <body>
-    <!-- Timer Overlay -->
-    <div id="timerEl">
-        
-        <div id="mydivheader">Click here to move</div>
-        <div class="countdown">
-            <span id="minutes">0</span>:<span id="second">00</span>:<span id="centiSecond">00</span>
-        </div>
-        <br>
-        <div>
-            <button id="startCount" onclick="startSW()" class="button is-rounded">Play</button>
-            <button id="pauseCount" onclick="pauseSW()" class="button is-rounded" disabled>Pause</button>
-            <button id="resetCount" onclick="resetSW()" class="button is-rounded" disabled>Reset</button>
-        </div>
+  <!--Login Modal-->
+  <div class="modal modal-login">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <img class="center" src="./assets/img/TBWG Logo_1.png" width="400px">
+      <div class="center">
+        <br />
+        Welcome to The Bodyweight Gym Online!<br />Please take a second to create your profile.<br /><br />
+        Name:<br /><input id="login-name"><br /><br />
+        City:<br /><input id="login-location"><br /><br />
+        <button id="login-submit">Continue</button>
+        <p id="login-error"></p>
+      </div>
     </div>
-    <!-- Timer and metronome buttons  -->
-    <button id="showTimer" class="button is-small">Click for Timer</button>
-    <button id="metronomeStart" class="button is-small">Start Metronome</button>
-    <button id="metronomeStop" class="button is-small">Stop Metronome</button>
+  </div>
 
-    <!-- DELETE br tag , TEMP To show timer drag function  -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <!-- DELETE br tag , TEMP To show timer drag function  -->
-
-    <!-- Javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/scripts/login.js"></script>
-    <script src="./assets/scripts/script.js"></script>
-    <script src="./assets/scripts/timerscript.js"></script>
-    <script src="./assets/scripts/videos.js"></script>
-    <script src="./assets/scripts/weather.js"></script>
-    <script src="./assets/scripts/videos.js"></script>
-
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./assets/scripts/login.js"></script>
+  <script src="./assets/scripts/script.js"></script>
+  <!--<script src="./assets/scripts/timerscript.js"></script>-->
+  <script src="./assets/scripts/videos.js"></script>
+  <script src="./assets/scripts/videos.js"></script>
 </body>
 
 </html>
