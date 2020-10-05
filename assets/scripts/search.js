@@ -1,5 +1,7 @@
 // Query Selectors
 $videoDisplayEl = $('#video-display');
+$workoutFiltersEl = $('#theWorkouts');
+$coachFiltersEl = $('#theCoaches');
 
 function checkWorkout(which) {
 
@@ -96,4 +98,89 @@ function displayVideos() {
 
 }
 
+function displayWorkouts(){
+    
+    console.log("[DISPLAY WORKOUT FILTERS]");
+
+    // Clear Current Selection
+    $workoutFiltersEl.empty();
+
+    // Create the Filter Container
+    var $newDivHolder = $('<div>');
+    $newDivHolder.attr("class", "tags are-medium mb-0 mt-2");
+
+    // Add the Info
+    var $newInfo = $('<span>');
+    $newInfo.attr("class", "tag is-white");
+    $newInfo.text("Workout Type:");
+    $newDivHolder.append($newInfo);
+
+    // Add the Default
+    var $newDefault = $('<span>');
+    $newDefault.attr("class", "tag is-black");
+    $newDefault.text("All");
+    $newDivHolder.append($newDefault);
+
+    for (var w = 0; w < Object.keys($theWorkouts).length; w++) {
+
+        // Add the Filters
+        var $newTag = $('<span>');
+        $newTag.attr("class", "tag "+checkWorkout($theWorkouts[w].name));
+        $newTag.text($theWorkouts[w].name);
+        $newDivHolder.append($newTag);
+    }
+
+    // Add the current filters to the div
+    $workoutFiltersEl.append($newDivHolder);
+
+}
+
+function displayCoaches(){
+
+    console.log("[DISPLAY COACH FILTERS]");
+
+    // Clear Current Selection
+    $coachFiltersEl.empty();
+
+    // Create the Filter Container
+    var $newDivHolder = $('<div>');
+    $newDivHolder.attr("class", "tags are-medium mb-0 mt-2");
+
+    // Add the Info
+    var $newInfo = $('<span>');
+    $newInfo.attr("class", "tag is-white");
+    $newInfo.text("Coaches:");
+    $newDivHolder.append($newInfo);
+
+    // Add the Default
+    var $newDefault = $('<span>');
+    $newDefault.attr("class", "tag is-black");
+    $newDefault.text("All");
+    $newDivHolder.append($newDefault);
+
+    for (var c = 0; c < Object.keys($theCoaches).length; c++) {
+
+        // Add the Filters
+        var $newTag = $('<span>');
+        $newTag.attr("class", "tag "+checkCoach($theCoaches[c].name));
+        $newTag.text($theCoaches[c].name);
+        $newDivHolder.append($newTag);
+    }
+
+    // Add the current filters to the div
+    $coachFiltersEl.append($newDivHolder);
+
+    // <div id="tags-coach" class="tags are-medium mb-0 mt-2">
+    //                     <span class="tag is-white">Coaches:</span>
+    //                     <span class="tag is-light">All</span>
+    //                     <span class="tag is-primary is-light">Corey</span>
+    //                     <span class="tag is-link is-light">Maisie</span>
+    //                     <span class="tag is-info is-light">Mikhail</span>
+    //                     <span class="tag is-success is-light">Ray</span>
+    //                     <span class="tag is-warning is-light">Oscar</span>
+    //                 </div>
+}
+
+displayWorkouts();
+displayCoaches();
 displayVideos();

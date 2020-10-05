@@ -21,35 +21,20 @@
     <!-- Search Area -->
     <section class="section">
         <div class="container">
-            <!-- Search Input -->
 
+            <!-- Search Input -->
             <div class="panel is-link">
+                <!-- Filter Panel Heading -->
                 <p class="panel-heading">
                     Filter our videos:
                 </p>
-                <div class="panel-block">
-                    <div id="tags-workouts" class="tags are-medium mb-0 mt-2">
-                        <span class="tag is-white">Workout Type:</span>
-                        <span class="tag is-black">All</span>
-                        <span class="tag is-danger">Strength</span>
-                        <span class="tag is-success">Mobility</span>
-                        <span class="tag is-warning">Handstands</span>
-                        <span class="tag is-info">Conditioning</span>
-                    </div>
-                </div>
-                <div class="panel-block">
-                    <div id="tags-coach" class="tags are-medium mb-0 mt-2">
-                        <span class="tag is-white">Coaches:</span>
-                        <span class="tag is-light">All</span>
-                        <span class="tag is-primary is-light">Corey</span>
-                        <span class="tag is-link is-light">Maisie</span>
-                        <span class="tag is-info is-light">Mikhail</span>
-                        <span class="tag is-success is-light">Ray</span>
-                        <span class="tag is-warning is-light">Oscar</span>
-                    </div>
-                </div>
+                <!-- Workout Filters Go Here -->
+                <div class="panel-block" id="theWorkouts"></div>
+                <!-- Coach Filters Go Here -->
+                <div class="panel-block" id="theCoaches"></div>
             </div>
-
+            <!-- Spacer -->
+            <br/>
             <!-- The Filtered Videos are Displayed Here -->
             <div id="video-display"></div>
         </div>
