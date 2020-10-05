@@ -128,7 +128,9 @@ function displayWorkouts() {
         $newDefault.addClass("is-light");
     }
     // Add Data
+    $newDefault.addClass("workout-filter");
     $newDefault.data("filter","All");
+    $newDefault.css('cursor', 'pointer');
     // Append to div
     $newDivHolder.append($newDefault);
 
@@ -143,7 +145,9 @@ function displayWorkouts() {
             $newTag.addClass("is-light");
         }
         // Add Data
-        $newDefault.data("filter",$theWorkouts[w].name);
+        $newTag.addClass("workout-filter");
+        $newTag.data("filter",$theWorkouts[w].name);
+        $newTag.css('cursor', 'pointer');
         // Append to div
         $newDivHolder.append($newTag);
     }
@@ -217,6 +221,20 @@ $(document).ready(function () {
     displayVideos();
 
     // Filter Clicks
+    // Workouts
+    $(document).on("click", ".workout-filter", function () {
+
+        // Retrieve the Filter Data
+        var $whichWorkout = $(this).data("filter");
+        
+        // Set the filters to the current selection
+        $workoutFilterSelected = $whichWorkout;
+
+        // Display the changed filters
+        displayWorkouts();
+
+    })
+    // Coaches
     $(document).on("click", ".coach-filter", function () {
 
         // Retrieve the Filter Data
@@ -225,6 +243,7 @@ $(document).ready(function () {
         // Set the filters to the current selection
         $coachFilterSelected = $whichCoach;
 
+        // Display the changed filters
         displayCoaches();
 
     })
