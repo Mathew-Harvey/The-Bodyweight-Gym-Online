@@ -7,6 +7,12 @@ $coachFiltersEl = $('#theCoaches');
 $workoutFilterSelected = "All";
 $coachFilterSelected = "All";
 
+// Watched Videos Array
+$watchedVideos = [];
+
+// Liked Videos Array
+$likedVideos = [];
+
 // Function to check and return the workouts colour
 function checkWorkout(which) {
 
@@ -37,21 +43,27 @@ function checkCoach(which) {
     return "";
 }
 
+// Function to check your selected filters versus the videos
 function checkSelection(whichCoach, whichWorkout) {
     
+    // If all is selected for both
     if (($workoutFilterSelected === "All") && ($coachFilterSelected === "All")){
         return true;
     }
+    // If a specific workout is selected with all coaches
     else if (($workoutFilterSelected === whichWorkout) && ($coachFilterSelected === "All")){
         return true;
     }
+    // If a specific coach is selected with all workouts
     else if (($coachFilterSelected === whichCoach) && ($workoutFilterSelected === "All")){
         return true;
     }
+    // If a specific coach and workout is selected
     else if (($workoutFilterSelected === whichWorkout) && ($coachFilterSelected === whichCoach)){
         return true;
     }
     
+    // Otherwise, return false
     return false;
 }
 
@@ -108,17 +120,22 @@ function displayVideos() {
             $newCoach.addClass(checkCoach($thisCoach));
 
             // Create the Heart Icon
-            var $newHeart = $("<i>");
+            var $newHeart = $("<span>");
+            $newHeart.attr("class", "tag");
             // Has the Video been Liked?
             // $newHeart.attr("class","fas fa-heart");
-            $newHeart.attr("class", "far fa-heart");
-            $newHeart.attr("style", "margin-left: auto; margin-right: 10px")
+            var $newIcon = $('<i>');            
+            $newIcon.attr("class", "far fa-heart");
+            $newHeart.append($newIcon);
 
             // Create the Viewed Icon
             var $newViewed = $('<i>');
+            $newViewed.attr("class", "tag");
             // Has the Video been Viewed?
             // $newViewed.attr("class","fas fa-check-circle");
-            $newViewed.attr("class", "far fa-check-circle");
+            var $newTick = $('<i>');            
+            $newTick.attr("class", "far fa-check-circle");
+            $newViewed.append($newTick);
 
             // Append Everything
             $newTags.append($newWorkout, $newCoach, $newHeart, $newViewed);
