@@ -2,63 +2,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="./assets/timerstyle.css" />
-  <title>Timer</title>
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style/styles.css" />
+    <link rel="stylesheet" href="./assets/style/timerstyle.css" />
+    <title>The Bodyweight Gym Online</title>
 </head>
 
 <body>
-  <header>
-    <h1>Timer</h1>
-  </header>
-  <div class="container">
-    <div class="timer">
-      <div id="hand"></div>
-      <div class="controls">
-        <label class="switch" for="status-toggle">
-          <input checked type="checkbox" name="status-toggle" id="status-toggle" />
-          <span class="slider"></span>
-        </label>
-        <div class="status">Status: <span id="status">Working</span></div>
-        <div class="time">
-          <div id="minutes">25</div>
-          <div id="seconds">00</div>
+    <!-- Timer Overlay -->
+    <div id="timerEl">
+        
+        <div id="mydivheader">Click here to move</div>
+        <div class="countdown">
+            <span id="minutes">0</span>:<span id="second">00</span>:<span id="centiSecond">00</span>
         </div>
-        <div class="buttons">
-          <button aria-label="play" id="play">
-            <i class="fa fa-play" aria-hidden="true"></i>
-          </button>
-          <button aria-label="pause" id="pause">
-            <i class="fa fa-pause" aria-hidden="true"></i>
-          </button>
-          <button aria-label="stop" id="stop">
-            <i class="fa fa-stop" aria-hidden="true"></i>
-          </button>
+        <br>
+        <div>
+            <button id="startCount" onclick="startSW()" class="button is-rounded">Play</button>
+            <button id="pauseCount" onclick="pauseSW()" class="button is-rounded" disabled>Pause</button>
+            <button id="resetCount" onclick="resetSW()" class="button is-rounded" disabled>Reset</button>
         </div>
-      </div>
     </div>
-    <div class="inputs">
-      <div class="input-group">
-        <label for="work-minutes">Minutes of Work</label>
-        <input type="number" name="work" id="work-minutes" value="25" />
-      </div>
-      <div class="input-group">
-        <label for="rest-minutes">Minutes of Rest</label>
-        <input type="number" name="rest" id="rest-minutes" value="5" />
-      </div>
-    </div>
-  </div>
-  <script src="./assets/timerscript.js"></script>
-    <script src="./assets/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <!-- Timer and metronome buttons  -->
+    <button id="showTimer" class="button is-small">Click for Timer</button>
+    <button id="metronomeStart" class="button is-small">Start Metronome</button>
+    <button id="metronomeStop" class="button is-small">Stop Metronome</button>
+
+    <!-- DELETE br tag , TEMP To show timer drag function  -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- DELETE br tag , TEMP To show timer drag function  -->
+
     <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/scripts/login.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/timerscript.js"></script>
     <script src="./assets/scripts/videos.js"></script>
+    <script src="./assets/scripts/weather.js"></script>
+    <script src="./assets/scripts/videos.js"></script>
+
 </body>
 
 </html>
