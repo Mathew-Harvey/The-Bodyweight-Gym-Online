@@ -37,6 +37,21 @@ function checkCoach(which) {
     return "";
 }
 
+function checkSelection(whichCoach, whichWorkout) {
+    
+    if (($workoutFilterSelected === "All") && ($coachFilterSelected === "All")){
+        return true;
+    }
+    else if ($workoutFilterSelected === whichWorkout){
+        return true;
+    }
+    else if ($coachFilterSelected === whichCoach){
+        return true;
+    }
+    
+    return false;
+}
+
 // Function to display the current video selection
 function displayVideos() {
 
@@ -51,49 +66,57 @@ function displayVideos() {
 
     for (var v = 0; v < Object.keys($theVideos).length; v++) {
 
-        // Create the Individual Video Holder
-        var $newVidHolder = $('<div>');
-        $newVidHolder.attr("class", "column is-3");
+        var $thisWorkout = $theVideos[v].tags[0];
+        var $thisCoach = $theVideos[v].coach;
+        var $thisScreenshot = $theVideos[v].screenshot;
 
-        // Create the Thumbnail
-        var $newThumb = $('<img>');
-        $newThumb.attr("src", $theVideos[v].screenshot);
+        if (checkSelection($thisCoach, $thisWorkout)) {
 
-        // Create the Tags beneath the video
-        var $newTags = $('<div>');
-        $newTags.attr("class", "tags are-medium");
+            // Create the Individual Video Holder
+            var $newVidHolder = $('<div>');
+            $newVidHolder.attr("class", "column is-3");
 
-        // Create the Workout Tag
-        var $newWorkout = $('<span>');
-        $newWorkout.attr("class", "tag");
-        $newWorkout.text($theVideos[v].tags[0]);
-        // Return the Correct Colouring
-        $newWorkout.addClass(checkWorkout($theVideos[v].tags[0]));
+            // Create the Thumbnail
+            var $newThumb = $('<img>');
+            $newThumb.attr("src", $thisScreenshot);
 
-        // Create the Coach Tag
-        var $newCoach = $('<span>');
-        $newCoach.attr("class", "tag");
-        $newCoach.text($theVideos[v].coach);
-        // Return the Correct Colouring
-        $newCoach.addClass(checkCoach($theVideos[v].coach));
+            // Create the Tags beneath the video
+            var $newTags = $('<div>');
+            $newTags.attr("class", "tags are-medium");
 
-        // Create the Heart Icon
-        var $newHeart = $("<i>");
-        // Has the Video been Liked?
-        // $newHeart.attr("class","fas fa-heart");
-        $newHeart.attr("class", "far fa-heart");
-        $newHeart.attr("style", "margin-left: auto; margin-right: 10px")
+            // Create the Workout Tag
+            var $newWorkout = $('<span>');
+            $newWorkout.attr("class", "tag");
+            $newWorkout.text($thisWorkout);
+            // Return the Correct Colouring
+            $newWorkout.addClass(checkWorkout($thisWorkout));
 
-        // Create the Viewed Icon
-        var $newViewed = $('<i>');
-        // Has the Video been Viewed?
-        // $newViewed.attr("class","fas fa-check-circle");
-        $newViewed.attr("class", "far fa-check-circle");
+            // Create the Coach Tag
+            var $newCoach = $('<span>');
+            $newCoach.attr("class", "tag");
+            $newCoach.text($thisCoach);
+            // Return the Correct Colouring
+            $newCoach.addClass(checkCoach($thisCoach));
 
-        // Append Everything
-        $newTags.append($newWorkout, $newCoach, $newHeart, $newViewed);
-        $newVidHolder.append($newThumb, $newTags);
-        $newDivHolder.append($newVidHolder);
+            // Create the Heart Icon
+            var $newHeart = $("<i>");
+            // Has the Video been Liked?
+            // $newHeart.attr("class","fas fa-heart");
+            $newHeart.attr("class", "far fa-heart");
+            $newHeart.attr("style", "margin-left: auto; margin-right: 10px")
+
+            // Create the Viewed Icon
+            var $newViewed = $('<i>');
+            // Has the Video been Viewed?
+            // $newViewed.attr("class","fas fa-check-circle");
+            $newViewed.attr("class", "far fa-check-circle");
+
+            // Append Everything
+            $newTags.append($newWorkout, $newCoach, $newHeart, $newViewed);
+            $newVidHolder.append($newThumb, $newTags);
+            $newDivHolder.append($newVidHolder);
+
+        }
     }
 
     // Add the current video selection to the div
@@ -129,7 +152,7 @@ function displayWorkouts() {
     }
     // Add Data
     $newDefault.addClass("workout-filter");
-    $newDefault.data("filter","All");
+    $newDefault.data("filter", "All");
     $newDefault.css('cursor', 'pointer');
     // Append to div
     $newDivHolder.append($newDefault);
@@ -146,7 +169,7 @@ function displayWorkouts() {
         }
         // Add Data
         $newTag.addClass("workout-filter");
-        $newTag.data("filter",$theWorkouts[w].name);
+        $newTag.data("filter", $theWorkouts[w].name);
         $newTag.css('cursor', 'pointer');
         // Append to div
         $newDivHolder.append($newTag);
@@ -185,7 +208,7 @@ function displayCoaches() {
     }
     // Add Data
     $newDefault.addClass("coach-filter");
-    $newDefault.data("filter","All");
+    $newDefault.data("filter", "All");
     $newDefault.css('cursor', 'pointer');
     // Append to div
     $newDivHolder.append($newDefault);
@@ -202,7 +225,7 @@ function displayCoaches() {
         }
         // Add Data
         $newTag.addClass("coach-filter");
-        $newTag.data("filter",$theCoaches[c].name);
+        $newTag.data("filter", $theCoaches[c].name);
         $newTag.css('cursor', 'pointer');
         // Append to div
         $newDivHolder.append($newTag);
@@ -226,12 +249,13 @@ $(document).ready(function () {
 
         // Retrieve the Filter Data
         var $whichWorkout = $(this).data("filter");
-        
+
         // Set the filters to the current selection
         $workoutFilterSelected = $whichWorkout;
 
         // Display the changed filters
         displayWorkouts();
+        displayVideos();
 
     })
     // Coaches
@@ -239,12 +263,13 @@ $(document).ready(function () {
 
         // Retrieve the Filter Data
         var $whichCoach = $(this).data("filter");
-        
+
         // Set the filters to the current selection
         $coachFilterSelected = $whichCoach;
 
         // Display the changed filters
         displayCoaches();
+        displayVideos();
 
     })
 })
