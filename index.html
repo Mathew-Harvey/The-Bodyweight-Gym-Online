@@ -14,30 +14,28 @@
 </head>
 
 <body>
-  <!-- Timer and metronome buttons  -->
-    <button id="showTimer" class="button is-small">Click for Timer</button>
-    <button id="metronomeStart" class="button is-small">Start Metronome</button>
-    <button id="metronomeStop" class="button is-small">Stop Metronome</button>
-       <!-- Timer Overlay -->
+    <!-- Timer Overlay -->
     <div id="timerEl">
-
-        <div style="height: 100px"></div>
+        
+        <div id="mydivheader">Click here to move</div>
         <div class="countdown">
             <span id="minutes">0</span>:<span id="second">00</span>:<span id="centiSecond">00</span>
         </div>
         <br>
         <div>
-            <button id="startCount" onclick="startSW()">Start</button>
-            <button id="pauseCount" onclick="pauseSW()" disabled>Pause</button>
-            <button id="resetCount" onclick="resetSW()" disabled>Reset</button>
+            <button id="startCount" onclick="startSW()" class="button is-rounded">Play</button>
+            <button id="pauseCount" onclick="pauseSW()" class="button is-rounded" disabled>Pause</button>
+            <button id="resetCount" onclick="resetSW()" class="button is-rounded" disabled>Reset</button>
         </div>
     </div>
+    <!-- Timer and metronome buttons  -->
+    <button id="showTimer" class="button is-small">Click for Timer</button>
+    <button id="metronomeStart" class="button is-small">Start Metronome</button>
+    <button id="metronomeStop" class="button is-small">Stop Metronome</button>
 
-    <!-- metronome 1 second beep button -->
-
-
-
-
+    <!-- DELETE br tag , TEMP To show timer drag function  -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- DELETE br tag , TEMP To show timer drag function  -->
 
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,7 +46,6 @@
     <script src="./assets/scripts/videos.js"></script>
     <script src="./assets/scripts/weather.js"></script>
     <script src="./assets/scripts/videos.js"></script>
-
 
 </body>
 
