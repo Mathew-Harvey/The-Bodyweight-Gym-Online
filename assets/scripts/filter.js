@@ -97,16 +97,19 @@ function displayVideos() {
             var $newVidHolder = $('<div>');
             $newVidHolder.attr("class", "column is-3");
 
-            // Create the Thumbnail
+            // Create the Thumbnail Div
             var $newOverlay = $('<div>');
             $newOverlay.attr("class","overlay");
-
+            // Create the Play Icon Div
+            $newIcon = $('<div>');
+            $newIcon.html('<i class="fas fa-play playicon"></i>');
+            // Add the Thumbnail
             var $newThumb = $('<img>');
             $newThumb.attr("class","video-buttons");
-            $newThumb.attr("src", $thisScreenshot);
-            $newThumb.css("cursor","pointer");           
-    
+            $newThumb.attr("src", $thisScreenshot);   
+            // Append to the Thumbnail Div
             $newOverlay.append($newThumb);
+            $newOverlay.append($newIcon);
 
             // Create the Tags beneath the video
             var $newTags = $('<div>');
