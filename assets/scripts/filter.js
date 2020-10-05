@@ -42,10 +42,13 @@ function checkSelection(whichCoach, whichWorkout) {
     if (($workoutFilterSelected === "All") && ($coachFilterSelected === "All")){
         return true;
     }
-    else if ($workoutFilterSelected === whichWorkout){
+    else if (($workoutFilterSelected === whichWorkout) && ($coachFilterSelected === "All")){
         return true;
     }
-    else if ($coachFilterSelected === whichCoach){
+    else if (($coachFilterSelected === whichCoach) && ($workoutFilterSelected === "All")){
+        return true;
+    }
+    else if (($workoutFilterSelected === whichWorkout) && ($coachFilterSelected === whichCoach)){
         return true;
     }
     
