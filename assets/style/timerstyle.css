@@ -1,18 +1,17 @@
 /* DELETE THIS BACKGROUND - JUST FOR SHOWING TIMER TRANSPARENCY*/
 
-body
-{
-  background-image: url(../img/temp.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-} 
+body {
+    /*background-image: url(../img/temp.jpg);*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
 
 .timer {
     display: none;
 }
 
-.countdown{
+.countdown {
     font-size: 40px;
     font-weight: 700
 }
@@ -23,13 +22,10 @@ body
     min-width: 75px;
 }
 
-button{
+button {
     padding: 5px 10px;
     font-size: 20px;
-
 }
-
-
 
 #timerEl {
     position: absolute;
@@ -38,13 +34,13 @@ button{
     text-align: center;
     border: 1px solid #d3d3d3;
     opacity: 0.9;
-  }
-  
-  #mydivheader {
+}
+
+#mydivheader {
     padding: 10px;
     cursor: move;
     z-index: 10;
     background-color: #2196F3;
     color: #fff;
     opacity: 0.75;
-  }
+}

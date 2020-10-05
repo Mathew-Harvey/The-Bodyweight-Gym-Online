@@ -1,3 +1,9 @@
+.container {
+    padding: 0 auto;
+    min-height: calc(100vh - 70px);
+    background-color: lightgray;
+}
+
 .navbar {
     padding: 5px 5px 5px 5px;
     margin: 0 auto;
@@ -7,4 +13,70 @@
 #timerEl {
     left: 50%;
     top: 50%;
+}
+
+.footer {
+    display: flex;
+    background-color: #1D201F;
+    width: 100%;
+    height: 4.5rem;
+    /*relative to the font size of the root element*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.column {
+    text-align: right;
+}
+
+.btn {
+    padding: 10px;
+    margin: 10px;
+    background-color: yellow;
+    color: darkblue;
+    border-radius: 10px;
+}
+
+#searchFilter {
+    background-color: lightpink;
+    margin: 20px;
+    padding: 10px;
+}
+
+#searchVideos {
+    background-color: lightskyblue;
+    margin: 20px;
+    padding: 10px;
+}
+
+#videoTile {
+    background-color: lightpink;
+    margin: 20px;
+    padding: 10px;
+}
+
+#buttonTile {
+    background-color: lightskyblue;
+    margin: 20px;
+    padding: 10px;
+}
+
+#gif {
+    background-color: lightsteelblue;
+    margin: 20px;
+    padding: 10px;
+}
+
+a:hover {
+    color: #000;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns*/
+
+@media screen and (max-width: 800px) {
+    .collumn {
+        flex: 50%;
+        max-width: 50%;
+    }
 }

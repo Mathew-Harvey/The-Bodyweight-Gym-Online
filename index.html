@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style/styles.css" />
     <link rel="stylesheet" href="./assets/style/timerstyle.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <title>The Bodyweight Gym Online</title>
 </head>
 
@@ -19,7 +21,7 @@
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-start">
             <div class="navbar-brand">
-                <a class="navbar-item" href="https://thebodyweightgym.net">
+                <a class="navbar-item" href="https://thebodyweightgym.net" target="_blank">
                     <img src="C:\Users\JRSin\OneDrive\Desktop\UWA\Activities and Homework\waus-perth-fsf-pt-08-2020-u-c-master\waus-perth-fsf-pt-08-2020-u-c\The-Bodyweight-Gym-Online\assets\img\TBWG Logo_1 white.png" width="100px">
                 </a>
             </div>
@@ -27,47 +29,45 @@
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
-                    <a class="button is-dark">
+                    <a class="button is-dark" id="signup">
                         <strong>Sign up</strong>
                     </a>
-                    <a class="button is-dark">
+                    <a class="button is-dark" id="login">
                       Log in
                     </a>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="columns is-desktop">
-            <div class="column">1</div>
-            <div class="column">2</div>
-            <div class="column">3</div>
-            <div class="column">4</div>
+    <div class="container is-widescreen">
+        <div class="tile is-vertical is-ancestor">
+            <div class="tile is-parent is-vertical" id="searchFilter">
+
+            </div>
+            <div class="tile is-child is-vertical" id="searchVideos">
+                <!-- Add video-->
+            </div>
+        </div>
+        <!--end of container-->
+    </div>
+    <!--footer-->
+    <div class="footer">
+
+        <div class="column is-half">
+            &copy; 2020 | Team 4
+        </div>
+        <div class="column">
+            <a class="btn" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="btn" href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a class="btn" href="https://www.twitter.com" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
         </div>
     </div>
-    <!-- Timer Overlay -->
-    <div id="timerEl">
-
-        <div id="mydivheader">Click here to move</div>
-        <div class="countdown">
-            <span id="minutes">0</span>:<span id="second">00</span>:<span id="centiSecond">00</span>
-        </div>
-        <br>
-        <div>
-            <button id="startCount" onclick="startSW()" class="button is-rounded">Play</button>
-            <button id="pauseCount" onclick="pauseSW()" class="button is-rounded" disabled>Pause</button>
-            <button id="resetCount" onclick="resetSW()" class="button is-rounded" disabled>Reset</button>
-        </div>
-    </div>
-    <!-- Timer and metronome buttons  -->
-    <button id="showTimer" class="button is-small">Click for Timer</button>
-    <button id="metronomeStart" class="button is-small">Start Metronome</button>
-    <button id="metronomeStop" class="button is-small">Stop Metronome</button>
-
-    <!-- DELETE br tag , TEMP To show timer drag function  -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <!-- DELETE br tag , TEMP To show timer drag function  -->
-
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
