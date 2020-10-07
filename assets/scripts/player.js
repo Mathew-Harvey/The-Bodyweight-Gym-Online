@@ -102,7 +102,7 @@ function loadVideo() {
 
     // Create the Tags beneath the video
     var $newTags = $('<div>');
-    $newTags.attr("class", "tags are-medium video-tags");
+    $newTags.attr("class", "tags are-medium video-tags spacer");
     $videoPlayerEl.append($newTags);
 
     updateTags($loadThisVideo);

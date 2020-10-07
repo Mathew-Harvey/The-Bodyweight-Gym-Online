@@ -16,7 +16,6 @@ function checkSelection(whichCoach, whichWorkout) {
     }
     // If a specific workout is selected with all coaches
     else if (($.inArray($workoutFilterSelected, whichWorkout) != -1) && ($coachFilterSelected === "All")){
-    // else if (($workoutFilterSelected === whichWorkout) && ($coachFilterSelected === "All")){
         return true;
     }
     // If a specific coach is selected with all workouts
@@ -269,6 +268,7 @@ function displayCoaches() {
         $newTag.addClass("coach-filter");
         $newTag.data("filter", $theCoaches[c].name);
         $newTag.css('cursor', 'pointer');
+        
         // Append to div
         $newDivHolder.append($newTag);
     }

@@ -93,3 +93,7 @@
 #videoplayer {
     height: calc(100vh - 190px);
 }
+
+.spacer {
+    margin-top: 15px;
+}
