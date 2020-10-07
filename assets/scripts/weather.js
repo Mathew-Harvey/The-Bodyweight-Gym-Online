@@ -5,10 +5,22 @@ if (localStorage.getItem("userProfile") != null)
     $.ajax({
         url: url,
         success: function (data) {
-            console.log(data);
-        },
+            $('#weather-icon').attr('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
+            console.log(`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
+            var weatherCond = data.weather[0].main;
+            $("#current-temp").text(Math.floor(data.main.temp) + "\u00B0C");
+            if (weatherCond === "Clear" || weatherCond === "Clouds" || weatherCond === "Mist" || weatherCond === "Fog") {
+                $("#weather-txt").html("Train <strong>outside</strong> today");
+            } else {
+                $("#weather-txt").html("Train <strong>inside</strong> today");
+            }
+            console.log(data)
+;        },
         error: function (e) {
-            console.log(e.responseText);
+            $("#weather-txt").text("Something went wrong");
         }
     });
+}
+else{
+    $("#weather-txt").html("<a href='./index.html'>Create profile </a>for weather");
 }

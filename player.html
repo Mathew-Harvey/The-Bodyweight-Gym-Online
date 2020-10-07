@@ -16,10 +16,18 @@
 <body>
 
 
-    <!--Weather div-->
-    <div>
-        <h1>Weather</h1>
-        <img id="weather-icon" src="" alt="Weather icon" />
+
+    <div class="columns">
+        <!--Weather div-->
+        <div class="column center column-section">
+            <img id="weather-icon" class="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Weather icon" width="48px" />
+            <p id="current-temp"></p>
+            <p id="weather-txt">Loading... </p>
+        </div>
+        <!--Chuck Norris div-->
+        <div class="column center column-section">
+            <button id="chucknorris-btn" class="chucknorris-btn"><img class="punch-img" src="./assets/img/punch-icon.png" alt="punch image"/> Motivation!</button>            
+        </div>
     </div>
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
