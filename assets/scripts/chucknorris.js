@@ -1,10 +1,18 @@
-var url = `https://api.openweathermap.org/data/2.5/weather?q=${profileObj.location}&units=metric&appid=256b25d2b8a8f2b130f652e84d69f8ee`;
+
+$(".modal-close").on("click", function () {
+    $(".modal-chucknorris").removeClass("is-active");
+    $("#chucknorris-quote").text("Loading...");
+})
+
+$(".chucknorris-btn").on("click", function () {
+    var url = `http://api.icndb.com/jokes/random`;
     $.ajax({
         url: url,
         success: function (data) {
-            console.log(data);
+            $("#chucknorris-quote").text('"' + data.value.joke + '" - Chuck Norris');
         },
         error: function () {
-            ;
         }
-        });
+    });
+    $(".modal-chucknorris").addClass("is-active");
+})
