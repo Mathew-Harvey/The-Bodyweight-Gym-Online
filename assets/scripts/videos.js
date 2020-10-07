@@ -5,7 +5,7 @@ const $theVideos = {
     0: {
 
         "link": "player.vimeo.com/video/463677938",
-        "tags": ["Mobility","Strength"],
+        "tags": ["Mobility"],
         "coach": "Corey",
         "screenshot": "./assets/img/previews/prev1.png"
     },
