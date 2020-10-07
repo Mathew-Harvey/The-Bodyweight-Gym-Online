@@ -25,6 +25,11 @@ const $theCoaches = {
     4: {
         "name": "Oscar",
         "colour": "is-warning"
+    },
+    // Coach 6
+    5: {
+        "name": "Kelvin",
+        "colour": "is-danger"
     }
 
 }

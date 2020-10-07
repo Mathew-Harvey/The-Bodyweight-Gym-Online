@@ -4,6 +4,7 @@ var $videoPlayerEl = $('#videoplayer');
 // Set defaults
 var $loadThisVideo;
 
+// Function to update the tags on button press
 function updateTags(which){
 
     console.log("Update tags");
@@ -78,7 +79,11 @@ function loadVideo() {
     }
 
     var $whichLink = $theVideos[$loadThisVideo].link;
-    $videoPlayerEl.html('<iframe src="https://' + $whichLink + '" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>');
+    $videoPlayerEl.html('<iframe src="https://' + $whichLink + '" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>');
+
+    document.getElementById('vimeo-player').addEventListener('ended', function (event) {
+        // Video ended; do something
+    });
 
     // Create the Tags beneath the video
     var $newTags = $('<div>');

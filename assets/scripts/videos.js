@@ -64,5 +64,45 @@ const $theVideos = {
         "tags": ["Strength"],
         "coach": "Oscar",
         "screenshot": "./assets/img/previews/prev8.png"
+    },
+    // Video 9
+    8: {
+
+        "link": "player.vimeo.com/video/465646586",
+        "tags": ["Strength"],
+        "coach": "Kelvin",
+        "screenshot": "./assets/img/previews/prev0.png"
+    },
+    // Video 10
+    9: {
+
+        "link": "player.vimeo.com/video/465648873",
+        "tags": ["Handstands"],
+        "coach": "Corey",
+        "screenshot": "./assets/img/previews/prev0.png"
+    },
+    // Video 11
+    10: {
+
+        "link": "player.vimeo.com/video/465651775",
+        "tags": ["Handstands"],
+        "coach": "Oscar",
+        "screenshot": "./assets/img/previews/prev0.png"
+    },
+    // Video 12
+    11: {
+
+        "link": "player.vimeo.com/video/465653369",
+        "tags": ["Strength"],
+        "coach": "Maisie",
+        "screenshot": "./assets/img/previews/prev0.png"
+    },
+    // Video 13
+    12: {
+
+        "link": "player.vimeo.com/video/465653369",
+        "tags": ["Mobility"],
+        "coach": "Maisie",
+        "screenshot": "./assets/img/previews/prev0.png"
     }
 }
