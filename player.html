@@ -13,22 +13,29 @@
     <link rel="stylesheet" href="./assets/style/timerstyle.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+    <script type="text/javascript" src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+
     <title>The Bodyweight Gym Online</title>
 
 </head>
 
 <body>
     <!--Chuck Norris modal-->
-    <div class="modal modal-chucknorris">
+    <div class="modal modal-chucknorris modal-fx-fadeInScale">
         <div class="modal-background"></div>
         <div class="modal-content">
-            <p id="chucknorris-quote" class="chucknorris-quote">Loading...</p>
+            <div class="columns is-vcentered p-0 m-0 fullheight">
+                <div class="column">
+                    <div id="chucknorris-quote" class="chucknorris-quote"><i
+                            class="fas fa-spinner fa-pulse"></i><br />Loading ...</div>
+                </div>
+            </div>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
     </div>
 
-     <!--navbar-->
-     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <!--navbar-->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-start">
             <div class="navbar-brand is-spaced">
                 <a class="navbar-item" href="https://thebodyweightgym.net">
@@ -48,7 +55,8 @@
                 </div>
             </div>
         </div>
-    </nav><!--Bottom section-->
+    </nav>
+    <!--Bottom section-->
     <div class="columns">
         <!--Weather div-->
         <div class="column center column-section">
@@ -60,16 +68,16 @@
         <!--Chuck Norris div-->
         <div class="column center column-section">
             <button class="chucknorris-btn"><img class="punch-img" src="./assets/img/punch-icon.png"
-                    alt="punch image" /><br/>Motivation!</button>
+                    alt="punch image" /><br />Motivation!</button>
         </div>
         <div class="column center column-section">
-        <button id="showTimer" class="button is-small">Show Timer</button>
-        <button id="metronomeStart" class="button is-small">Start Metronome</button>
-    </div>
+            <button id="showTimer" class="button is-small">Show Timer</button>
+            <button id="metronomeStart" class="button is-small">Start Metronome</button>
+        </div>
     </div>
 
     <!-- HTML -->
-    
+
     <div id="videoplayer" class="container"></div>
 
     <!-- Timer Overlay -->
@@ -86,7 +94,7 @@
             <button id="resetCount" onclick="resetSW()" class="button is-rounded" disabled>Reset</button>
         </div>
     </div>
-    
+
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script src="./assets/scripts/script.js"></script>

@@ -26,23 +26,20 @@
 }
 
 .modal-chucknorris .modal-content {
-    background-image: url("../img/chucknorris.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: auto;
-    background-color: #464646;
-    height:350px;
+    background-color: white;
+    min-height:350px;
+    border-radius: 10px;
+}
+
+.fullheight {
+    height: 100%;
 }
 
 .chucknorris-quote {
     font-size:20px;
     font-weight: 600;
     color:black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
 }
 
 .center {
@@ -94,5 +91,5 @@
 }
 
 #videoplayer {
-    height: calc(100vh - 260px);
+    height: calc(100vh - 190px);
 }
