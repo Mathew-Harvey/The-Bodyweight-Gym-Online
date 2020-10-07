@@ -71,7 +71,7 @@ const $theVideos = {
         "link": "player.vimeo.com/video/465646586",
         "tags": ["Strength"],
         "coach": "Kelvin",
-        "screenshot": "./assets/img/previews/prev0.png"
+        "screenshot": "./assets/img/previews/prev9.png"
     },
     // Video 10
     9: {
@@ -79,7 +79,7 @@ const $theVideos = {
         "link": "player.vimeo.com/video/465648873",
         "tags": ["Handstands"],
         "coach": "Corey",
-        "screenshot": "./assets/img/previews/prev0.png"
+        "screenshot": "./assets/img/previews/prev10.png"
     },
     // Video 11
     10: {
@@ -87,7 +87,7 @@ const $theVideos = {
         "link": "player.vimeo.com/video/465651775",
         "tags": ["Handstands"],
         "coach": "Oscar",
-        "screenshot": "./assets/img/previews/prev0.png"
+        "screenshot": "./assets/img/previews/prev11.png"
     },
     // Video 12
     11: {
@@ -95,14 +95,14 @@ const $theVideos = {
         "link": "player.vimeo.com/video/465653369",
         "tags": ["Strength"],
         "coach": "Maisie",
-        "screenshot": "./assets/img/previews/prev0.png"
+        "screenshot": "./assets/img/previews/prev12.png"
     },
     // Video 13
     12: {
 
-        "link": "player.vimeo.com/video/465653369",
+        "link": "player.vimeo.com/video/465712586",
         "tags": ["Mobility"],
         "coach": "Maisie",
-        "screenshot": "./assets/img/previews/prev0.png"
+        "screenshot": "./assets/img/previews/prev13.png"
     }
 }
