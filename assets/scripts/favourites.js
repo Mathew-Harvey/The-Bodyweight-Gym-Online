@@ -18,7 +18,7 @@ function displayFavourites() {
 
     for (var v = 0; v < $likedVideos.length; v++) {
 
-        var $thisWorkout = $theVideos[$likedVideos[v]].tags[0];
+        var $thisWorkout = $theVideos[$likedVideos[v]].tags;
         var $thisCoach = $theVideos[$likedVideos[v]].coach;
         var $thisScreenshot = $theVideos[$likedVideos[v]].screenshot;
 
@@ -49,11 +49,15 @@ function displayFavourites() {
         $newTags.attr("class", "tags are-medium");
 
         // Create the Workout Tag
-        var $newWorkout = $('<span>');
-        $newWorkout.attr("class", "tag");
-        $newWorkout.text($thisWorkout);
-        // Return the Correct Colouring
-        $newWorkout.addClass(checkWorkout($thisWorkout));
+        // Loop through all the tags
+        for (var i = 0; i < $thisWorkout.length; i++) {
+            var $newWorkout = $('<span>');
+            $newWorkout.attr("class", "tag");
+            $newWorkout.text($thisWorkout[i]);
+            // Return the Correct Colouring
+            $newWorkout.addClass(checkWorkout($thisWorkout[i]));
+            $newTags.append($newWorkout);
+        }
 
         // Create the Coach Tag
         var $newCoach = $('<span>');
@@ -91,7 +95,7 @@ function displayFavourites() {
         $newViewed.append($newTick);
 
         // Append Everything
-        $newTags.append($newWorkout, $newCoach, $newHeart, $newViewed);
+        $newTags.append($newCoach, $newHeart, $newViewed);
         $newVidHolder.append($newOverlay, $newTags);
         $newDivHolder.append($newVidHolder);
 
