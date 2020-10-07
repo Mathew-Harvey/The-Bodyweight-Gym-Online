@@ -48,9 +48,13 @@ function updateTags(which){
     var $newViewed = $('<i>');
     $newViewed.attr("class", "tag");
     // Has the Video been Viewed?
-    // $newViewed.attr("class","fas fa-check-circle");
-    var $newTick = $('<i>');
-    $newTick.attr("class", "far fa-check-circle");
+    var $newTick = $('<i>');             
+    if ($.inArray(v, $watchedVideos) == -1){
+        $newTick.attr("class", "far fa-check-circle");
+    }
+    else {
+        $newTick.attr("class","fas fa-check-circle");
+    } 
     $newViewed.append($newTick);
 
     // Append Everything

@@ -97,5 +97,6 @@ function updateStorage() {
 
 $(document).ready(function () {
 
+    // Retrieve local storage
     retrieveStoredHistory();
 })
