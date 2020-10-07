@@ -328,9 +328,6 @@ $(document).ready(function () {
         // Retrieve the Filter Data
         var $whichVideo = $(this).data("video");
 
-        // As we aren't using Vimeo API yet, let's manually "finish" the video
-        finishVideo($whichVideo);
-
         // Load the video to the player.html
         window.location = 'player.html?video=' + $whichVideo;        
 

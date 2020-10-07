@@ -5,15 +5,15 @@ var $videoPlayerEl = $('#videoplayer');
 var $loadThisVideo;
 
 // Function to update the tags on button press
-function updateTags(which){
+function updateTags(which) {
 
     console.log("Update tags");
 
     var $thisWorkout = $theVideos[which].tags[0];
     var $thisCoach = $theVideos[which].coach;
 
-    var $newTags = $('.video-tags');  
-    $newTags.empty();  
+    var $newTags = $('.video-tags');
+    $newTags.empty();
 
     // Create the Workout Tag
     var $newWorkout = $('<span>');
@@ -48,13 +48,13 @@ function updateTags(which){
     var $newViewed = $('<i>');
     $newViewed.attr("class", "tag");
     // Has the Video been Viewed?
-    var $newTick = $('<i>');             
-    if ($.inArray(v, $watchedVideos) == -1){
+    var $newTick = $('<i>');
+    if ($.inArray(which, $watchedVideos) == -1) {
         $newTick.attr("class", "far fa-check-circle");
     }
     else {
-        $newTick.attr("class","fas fa-check-circle");
-    } 
+        $newTick.attr("class", "fas fa-check-circle");
+    }
     $newViewed.append($newTick);
 
     // Append Everything
@@ -85,8 +85,15 @@ function loadVideo() {
     var $whichLink = $theVideos[$loadThisVideo].link;
     $videoPlayerEl.html('<iframe src="https://' + $whichLink + '" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>');
 
-    document.getElementById('vimeo-player').addEventListener('ended', function (event) {
-        // Video ended; do something
+    var iframe = document.querySelector('iframe');
+    var player = new Vimeo.Player(iframe);
+
+    player.on('ended', function () {
+        console.log('Ended the video');
+
+        finishVideo($loadThisVideo);
+        updateTags($loadThisVideo);
+        
     });
 
     // Create the Tags beneath the video
@@ -95,7 +102,7 @@ function loadVideo() {
     $videoPlayerEl.append($newTags);
 
     updateTags($loadThisVideo);
-    
+
 }
 
 
@@ -103,9 +110,6 @@ $(document).ready(function () {
 
     loadVideo();
     console.log("[LOAD VIDEO] " + $loadThisVideo);
-
-
-    // video-tags
 
     // Hearts
     $(document).on("click", ".heart", function () {
