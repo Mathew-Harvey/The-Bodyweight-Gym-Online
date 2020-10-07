@@ -1,144 +1,177 @@
-                .container {
-                    padding: 0 auto;
-                    min-height: calc(100vh - 70px);
-                }
-                
-                #heroBody {
-                    padding: 5px;
-                    margin: 5px;
-                }
-                
-                .column-section {
-                    background-color: rgb(228, 228, 228);
-                }
-                
-                .column-section:hover {
-                    background-color: rgb(248, 248, 248);
-                }
-                
-                .chucknorris-btn {
-                    background: transparent;
-                    border: none;
-                    outline: 0;
-                    width: 100%;
-                    height: 100%;
-                    font-size: 16px;
-                    cursor: pointer;
-                }
-                
-                .weather-icon {
-                    margin-bottom: -10px
-                }
-                
-                .modal-login .modal-content {
-                    background-color: white;
-                    padding-bottom: 40px;
-                }
-                
-                .modal-chucknorris .modal-content {
-                    background-image: url("../img/chucknorris.png");
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-size: auto;
-                    background-color: #464646;
-                    height: 350px;
-                }
-                
-                .chucknorris-quote {
-                    font-size: 20px;
-                    font-weight: 600;
-                    color: black;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translateX(-50%) translateY(-50%);
-                }
-                
-                .center {
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 50%;
-                    text-align: center;
-                }
-                
-                .navbar {
-                    padding: 5px 5px 5px 5px;
-                    width: 100vw;
-                }
-                
-                #navImg {
-                    width: 300px;
-                }
-                
-                #timerEl {
-                    left: 50%;
-                    top: 50%;
-                }
-                
-                .footer {
-                    display: flex;
-                    background-color: #1D201F;
-                    width: 100%;
-                    height: 4.5rem;
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                }
-                
-                .column {
-                    text-align: right;
-                }
-                
-                .btn {
-                    padding: 10px;
-                    margin: 10px;
-                    background-color: yellow;
-                    color: darkblue;
-                    border-radius: 10px;
-                }
-                
-                a:hover {
-                    color: #000;
-                }
-                /* Responsive layout - makes a two column-layout instead of four columns*/
-                
-                @media screen and (max-width: 800px) {
-                    .collumn {
-                        flex: 50%;
-                        max-width: 50%;
+                    .container {
+                        padding: 0 auto;
+                        min-height: calc(100vh - 70px);
                     }
-                }
-                /* Video Thumbnails */
-                
-                .overlay {
-                    background-color: #000000;
-                    height: auto;
-                    max-width: 100%;
-                    line-height: 0;
-                    margin-bottom: 5px;
-                    position: relative;
-                    cursor: pointer;
-                }
-                
-                .overlay:hover img {
-                    opacity: 0.8;
-                }
-                /* Video Play Icon */
-                
-                .playicon {
-                    position: absolute;
-                    top: calc(50% - 25px);
-                    left: calc(50% - 25px);
-                    font-size: 50px;
-                    color: white;
-                    opacity: 0;
-                }
-                
-                .overlay:hover .playicon {
-                    opacity: 0.7;
-                }
-                
-                #videoplayer {
-                    height: calc(100vh - 260px);
-                }
+                    
+                    #heroBody {
+                        padding: 5px;
+                        margin: 5px;
+                    }
+                    
+                    .column-section {
+                        background-color: rgb(228, 228, 228);
+                    }
+                    
+                    .column-section:hover {
+                        background-color: rgb(248, 248, 248);
+                    }
+                    
+                    .chucknorris-btn {
+                        background: transparent;
+                        border: none;
+                        outline: 0;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 16px;
+                        cursor: pointer;
+                    }
+                    
+                    .weather-icon {
+                        margin-bottom: -10px
+                    }
+                    
+                    .modal-login .modal-content {
+                        background-color: white;
+                        padding-bottom: 40px;
+                    }
+                    
+                    .modal-chucknorris .modal-content {
+                        background-image: url("../img/chucknorris.png");
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-attachment: fixed;
+                        background-size: auto;
+                        background-color: #464646;
+                        height: 350px;
+                    }
+                    
+                    .chucknorris-quote {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: black;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                    
+                    .center {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 50%;
+                        text-align: center;
+                    }
+                    
+                    .navbar {
+                        padding: 5px 5px 5px 5px;
+                        width: 100vw;
+                    }
+                    
+                    #navImg {
+                        width: 300px;
+                        margin: 20px 0 20px 40px;
+                    }
+                    
+                    #timerEl {
+                        left: 50%;
+                        top: 50%;
+                    }
+                    
+                    .footer {
+                        display: flex;
+                        background-color: #1D201F;
+                        width: 100%;
+                        height: 4.5rem;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                    }
+                    
+                    #copyright {
+                        text-align: center;
+                    }
+                    
+                    #favicons {
+                        text-align: right;
+                    }
+                    
+                    .faviconBtn {
+                        padding: 10px;
+                        margin: 10px;
+                        background-color: rgb(245, 245, 49);
+                        color: rgb(2, 2, 95);
+                        border-radius: 10px;
+                    }
+                    
+                    #apiCalls {
+                        margin: 50px 0 5px 0;
+                    }
+                    
+                    #showTimer,
+                    #metronomeStart {
+                        margin: 5px;
+                    }
+                    
+                    #showTimer {
+                        background-color: rgb(245, 245, 49);
+                    }
+                    
+                    #showTimer:hover {
+                        box-shadow: #fff;
+                    }
+                    
+                    #metronomeStart {
+                        background-color: rgb(2, 2, 95);
+                        color: #fff;
+                    }
+                    
+                    #weatherIconColumn,
+                    #motivationGifColumn,
+                    #timerBtns {
+                        justify-items: center;
+                    }
+                    
+                    a:hover {
+                        color: #000;
+                    }
+                    /* Responsive layout - makes a two column-layout instead of four columns*/
+                    
+                    @media screen and (max-width: 800px) {
+                        .collumn {
+                            flex: 50%;
+                            max-width: 50%;
+                        }
+                    }
+                    /* Video Thumbnails */
+                    
+                    .overlay {
+                        background-color: #000000;
+                        height: auto;
+                        max-width: 100%;
+                        line-height: 0;
+                        margin-bottom: 5px;
+                        position: relative;
+                        cursor: pointer;
+                    }
+                    
+                    .overlay:hover img {
+                        opacity: 0.8;
+                    }
+                    /* Video Play Icon */
+                    
+                    .playicon {
+                        position: absolute;
+                        top: calc(50% - 25px);
+                        left: calc(50% - 25px);
+                        font-size: 50px;
+                        color: white;
+                        opacity: 0;
+                    }
+                    
+                    .overlay:hover .playicon {
+                        opacity: 0.7;
+                    }
+                    
+                    #videoplayer {
+                        height: calc(100vh - 260px);
+                    }

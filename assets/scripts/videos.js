@@ -104,5 +104,13 @@ const $theVideos = {
         "tags": ["Mobility"],
         "coach": "Maisie",
         "screenshot": "./assets/img/previews/prev13.png"
+    },
+    // Video 14
+    13: {
+
+        "link": "player.vimeo.com/video/465777314",
+        "tags": ["Conditioning"],
+        "coach": "Ray",
+        "screenshot": "./assets/img/previews/prev14.png"
     }
 }

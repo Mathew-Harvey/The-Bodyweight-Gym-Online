@@ -9,18 +9,22 @@ function updateTags(which) {
 
     console.log("Update tags");
 
-    var $thisWorkout = $theVideos[which].tags[0];
+    var $thisWorkout = $theVideos[which].tags;
     var $thisCoach = $theVideos[which].coach;
 
     var $newTags = $('.video-tags');
     $newTags.empty();
 
     // Create the Workout Tag
-    var $newWorkout = $('<span>');
-    $newWorkout.attr("class", "tag");
-    $newWorkout.text($thisWorkout);
-    // Return the Correct Colouring
-    $newWorkout.addClass(checkWorkout($thisWorkout));
+    // Loop through all the tags
+    for (var i = 0; i < $thisWorkout.length; i++) {
+        var $newWorkout = $('<span>');
+        $newWorkout.attr("class", "tag");
+        $newWorkout.text($thisWorkout[i]);
+        // Return the Correct Colouring
+        $newWorkout.addClass(checkWorkout($thisWorkout[i]));
+        $newTags.append($newWorkout);
+    }
 
     // Create the Coach Tag
     var $newCoach = $('<span>');
@@ -58,7 +62,7 @@ function updateTags(which) {
     $newViewed.append($newTick);
 
     // Append Everything
-    $newTags.append($newWorkout, $newCoach, $newHeart, $newViewed);
+    $newTags.append($newCoach, $newHeart, $newViewed);
 
 }
 
@@ -93,12 +97,12 @@ function loadVideo() {
 
         finishVideo($loadThisVideo);
         updateTags($loadThisVideo);
-        
+
     });
 
     // Create the Tags beneath the video
     var $newTags = $('<div>');
-    $newTags.attr("class", "tags are-medium video-tags");
+    $newTags.attr("class", "tags are-medium video-tags spacer");
     $videoPlayerEl.append($newTags);
 
     updateTags($loadThisVideo);
@@ -116,6 +120,7 @@ $(document).ready(function () {
 
         // Retrieve the Filter Data
         var $whichVideo = $(this).data("video");
+        $whichVideo = parseInt($whichVideo);
 
         // Add a heart to a video
         heartVideo($whichVideo);

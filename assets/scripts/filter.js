@@ -15,7 +15,7 @@ function checkSelection(whichCoach, whichWorkout) {
         return true;
     }
     // If a specific workout is selected with all coaches
-    else if (($workoutFilterSelected === whichWorkout) && ($coachFilterSelected === "All")){
+    else if (($.inArray($workoutFilterSelected, whichWorkout) != -1) && ($coachFilterSelected === "All")){
         return true;
     }
     // If a specific coach is selected with all workouts
@@ -23,7 +23,7 @@ function checkSelection(whichCoach, whichWorkout) {
         return true;
     }
     // If a specific coach and workout is selected
-    else if (($workoutFilterSelected === whichWorkout) && ($coachFilterSelected === whichCoach)){
+    else if (($.inArray($workoutFilterSelected, whichWorkout) != -1) && ($coachFilterSelected === whichCoach)){
         return true;
     }
     
@@ -48,7 +48,7 @@ function displayVideos() {
 
     for (var v = 0; v < Object.keys($theVideos).length; v++) {
 
-        var $thisWorkout = $theVideos[v].tags[0];
+        var $thisWorkout = $theVideos[v].tags;
         var $thisCoach = $theVideos[v].coach;
         var $thisScreenshot = $theVideos[v].screenshot;
 
@@ -81,11 +81,15 @@ function displayVideos() {
             $newTags.attr("class", "tags are-medium");
 
             // Create the Workout Tag
-            var $newWorkout = $('<span>');
-            $newWorkout.attr("class", "tag");
-            $newWorkout.text($thisWorkout);
-            // Return the Correct Colouring
-            $newWorkout.addClass(checkWorkout($thisWorkout));
+            // Loop through all the tags
+            for (var i=0; i<$thisWorkout.length; i++){
+                var $newWorkout = $('<span>');
+                $newWorkout.attr("class", "tag");
+                $newWorkout.text($thisWorkout[i]);
+                // Return the Correct Colouring
+                $newWorkout.addClass(checkWorkout($thisWorkout[i]));
+                $newTags.append($newWorkout);
+            }
 
             // Create the Coach Tag
             var $newCoach = $('<span>');
@@ -123,7 +127,7 @@ function displayVideos() {
             $newViewed.append($newTick);
 
             // Append Everything
-            $newTags.append($newWorkout, $newCoach, $newHeart, $newViewed);
+            $newTags.append($newCoach, $newHeart, $newViewed);
             $newVidHolder.append($newOverlay, $newTags);
             $newDivHolder.append($newVidHolder);
 
@@ -264,6 +268,7 @@ function displayCoaches() {
         $newTag.addClass("coach-filter");
         $newTag.data("filter", $theCoaches[c].name);
         $newTag.css('cursor', 'pointer');
+        
         // Append to div
         $newDivHolder.append($newTag);
     }
