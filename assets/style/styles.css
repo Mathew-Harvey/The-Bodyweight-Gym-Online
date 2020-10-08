@@ -42,6 +42,18 @@
     text-align: center;
 }
 
+.userProfile-name {
+    margin-top:-8px;
+}
+
+.userProfile-name strong {
+    color:white;
+}
+
+#login-error {
+    color:red;
+}
+
 .center {
     display: block;
     margin-left: auto;
