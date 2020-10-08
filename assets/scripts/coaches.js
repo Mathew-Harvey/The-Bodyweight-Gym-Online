@@ -4,32 +4,32 @@ const $theCoaches = {
     // Coach 1
     0: {
         "name": "Corey",
-        "colour": "is-primary"
+        "colour": "#EDF02D"
     },
     // Coach 2
     1: {
         "name": "Maisie",
-        "colour": "is-link"
+        "colour": "#EE7917"
     },
     // Coach 3
     2: {
         "name": "Mikhail",
-        "colour": "is-info"
+        "colour": "#177FEE"
     },
     // Coach 4
     3: {
         "name": "Ray",
-        "colour": "is-success"
+        "colour": "#171AEE"
     },
     // Coach 5
     4: {
         "name": "Oscar",
-        "colour": "is-warning"
+        "colour": "#17C0EE"
     },
     // Coach 6
     5: {
         "name": "Kelvin",
-        "colour": "is-danger"
+        "colour": "#EEAA17"
     }
 
 }
