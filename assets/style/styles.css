@@ -16,6 +16,20 @@
     cursor: pointer;
 }
 
+.timer-btn {
+    background: transparent;
+    border: none;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.clock-icon {
+    font-size: 40px;
+}
+
 .weather-icon {
     margin-bottom: -10px
 }

@@ -20,12 +20,12 @@ $(document).ready(function () {
     if (showTimer == true) {
       showTimer = false
       $("#timerEl").toggleClass("shownTimer");
-      $(this).text("Show Timer");
+      $(this).html('<i class="clock-icon fas fa-clock"></i><br />Show Timer');
     }
     else {
       showTimer = true
       $("#timerEl").toggleClass("shownTimer");
-      $(this).text("Hide Timer");
+      $(this).html('<i class="clock-icon far fa-clock"></i><br />Hide Timer');
 
     }
 
@@ -112,11 +112,11 @@ function stopMetronome() {
 $('#metronomeStart').click(function () {
   if (beepInt == -1) {
     startMetronome();
-    $(this).text("Stop Metronome");
+    $(this).html('<img src="./assets/img/metronome50.png" alt="metronome image" /><br />Stop Metronome');
   }
   else {
     stopMetronome();
-    $(this).text("Start Metronome");
+    $(this).html('<img src="./assets/img/metronome50dark.png" alt="metronome image" /><br />Start Metronome');
   }
 })
 
