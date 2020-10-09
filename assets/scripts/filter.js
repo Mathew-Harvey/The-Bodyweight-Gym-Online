@@ -9,24 +9,24 @@ $coachFilterSelected = "All";
 
 // Function to check your selected filters versus the videos
 function checkSelection(whichCoach, whichWorkout) {
-    
+
     // If all is selected for both
-    if (($workoutFilterSelected === "All") && ($coachFilterSelected === "All")){
+    if (($workoutFilterSelected === "All") && ($coachFilterSelected === "All")) {
         return true;
     }
     // If a specific workout is selected with all coaches
-    else if (($.inArray($workoutFilterSelected, whichWorkout) != -1) && ($coachFilterSelected === "All")){
+    else if (($.inArray($workoutFilterSelected, whichWorkout) != -1) && ($coachFilterSelected === "All")) {
         return true;
     }
     // If a specific coach is selected with all workouts
-    else if (($coachFilterSelected === whichCoach) && ($workoutFilterSelected === "All")){
+    else if (($coachFilterSelected === whichCoach) && ($workoutFilterSelected === "All")) {
         return true;
     }
     // If a specific coach and workout is selected
-    else if (($.inArray($workoutFilterSelected, whichWorkout) != -1) && ($coachFilterSelected === whichCoach)){
+    else if (($.inArray($workoutFilterSelected, whichWorkout) != -1) && ($coachFilterSelected === whichCoach)) {
         return true;
     }
-    
+
     // Otherwise, return false
     return false;
 }
@@ -63,15 +63,15 @@ function displayVideos() {
 
             // Create the Thumbnail Div
             var $newOverlay = $('<div>');
-            $newOverlay.attr("class","overlay");
-            $newOverlay.data("video",v);
+            $newOverlay.attr("class", "overlay");
+            $newOverlay.data("video", v);
             // Create the Play Icon Div
             $newIcon = $('<div>');
             $newIcon.html('<i class="fas fa-play playicon"></i>');
             // Add the Thumbnail
             var $newThumb = $('<img>');
-            $newThumb.attr("class","video-buttons");
-            $newThumb.attr("src", $thisScreenshot);   
+            $newThumb.attr("class", "video-buttons");
+            $newThumb.attr("src", $thisScreenshot);
             // Append to the Thumbnail Div
             $newOverlay.append($newThumb);
             $newOverlay.append($newIcon);
@@ -82,7 +82,7 @@ function displayVideos() {
 
             // Create the Workout Tag
             // Loop through all the tags
-            for (var i=0; i<$thisWorkout.length; i++){
+            for (var i = 0; i < $thisWorkout.length; i++) {
                 var $newWorkout = $('<span>');
                 $newWorkout.attr("class", "tag");
                 $newWorkout.text($thisWorkout[i]);
@@ -104,12 +104,12 @@ function displayVideos() {
             $newHeart.css('cursor', 'pointer');
             $newHeart.data("video", v);
             // Has the Video been Liked?
-            var $newIcon = $('<i>');            
-            if ($.inArray(v, $likedVideos) == -1){
+            var $newIcon = $('<i>');
+            if ($.inArray(v, $likedVideos) == -1) {
                 $newIcon.attr("class", "far fa-heart");
             }
             else {
-                $newIcon.attr("class","fas fa-heart");
+                $newIcon.attr("class", "fas fa-heart");
             }
             $newHeart.append($newIcon);
 
@@ -117,13 +117,13 @@ function displayVideos() {
             var $newViewed = $('<i>');
             $newViewed.attr("class", "tag");
             // Has the Video been Viewed?
-            var $newTick = $('<i>');               
-            if ($.inArray(v, $watchedVideos) == -1){
+            var $newTick = $('<i>');
+            if ($.inArray(v, $watchedVideos) == -1) {
                 $newTick.attr("class", "far fa-check-circle");
             }
             else {
-                $newTick.attr("class","fas fa-check-circle");
-            }         
+                $newTick.attr("class", "fas fa-check-circle");
+            }
             $newViewed.append($newTick);
 
             // Append Everything
@@ -135,7 +135,7 @@ function displayVideos() {
     }
 
     // Check for zero videos
-    if ($videoCount === 0){
+    if ($videoCount === 0) {
 
         // Create the Individual Video Holder
         var $newVidHolder = $('<div>');
@@ -268,7 +268,12 @@ function displayCoaches() {
         $newTag.addClass("coach-filter");
         $newTag.data("filter", $theCoaches[c].name);
         $newTag.css('cursor', 'pointer');
-        
+        // Add Tooltip
+        $newTag.addClass("tooltip");
+        $newTooltip = $('<span>');
+        $newTooltip.html('<img class="callout" src="./assets/img/headshots/' + $theCoaches[c].name.toLowerCase() + '.png" />');
+        $newTag.append($newTooltip);
+
         // Append to div
         $newDivHolder.append($newTag);
     }
@@ -334,7 +339,7 @@ $(document).ready(function () {
         var $whichVideo = $(this).data("video");
 
         // Load the video to the player.html
-        window.location = 'player.html?video=' + $whichVideo;        
+        window.location = 'player.html?video=' + $whichVideo;
 
     })
 })
