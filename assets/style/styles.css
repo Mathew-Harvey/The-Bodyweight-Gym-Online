@@ -143,3 +143,15 @@
     display: inline;
     position: absolute;
 }
+
+@media screen and (max-width: 1023px){
+    .navbar-menu {
+        background-color: #363636;
+        color: white;
+        box-shadow: none;
+        padding: .5rem 0;
+    }
+    .navbar-menu p {
+        color: white;
+    }
+}
