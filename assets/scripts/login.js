@@ -38,6 +38,7 @@ $("#login-submit").on("click", function () {
                 // Load weather 
                 var weatherCond = data.weather[0].main;
                 $("#current-temp").text(Math.floor(data.main.temp) + "\u00B0C");
+                $('#weather-icon').attr('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
                 if (weatherCond === "Clear" || weatherCond === "Clouds" || weatherCond === "Mist" || weatherCond === "Fog") {
                     $("#weather-txt").html("Train <strong>outside</strong> today");
                 } else {
