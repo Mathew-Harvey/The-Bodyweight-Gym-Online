@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 var timerBtn = document.getElementById("shownTimer")
 var timer = document.getElementsByClassName("timer")
 var minutes = document.getElementById("minutes")
@@ -164,3 +165,5 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+=======
+>>>>>>> af4b38836b5be67ea101f94894c5059ff690f3a9

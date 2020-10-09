@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 if (localStorage.getItem("userProfile") != null)
 {
     profileObj = JSON.parse(localStorage.getItem("userProfile"))
@@ -24,3 +25,6 @@ if (localStorage.getItem("userProfile") != null)
 else{
     $("#weather-txt").html("<a href='./index.html'>Create profile </a>for weather");
 }
+=======
+
+>>>>>>> af4b38836b5be67ea101f94894c5059ff690f3a9
