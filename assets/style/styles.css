@@ -78,6 +78,11 @@
     cursor: pointer;
 }
 
+.home-btn {
+    margin-right: 0 !important;
+    margin-left: 0.5rem;
+}
+
 .timer-btn {
     background: transparent;
     border: none;
@@ -86,6 +91,9 @@
     height: 100%;
     font-size: 16px;
     cursor: pointer;
+}
+.timer-btn i {
+    font-size: 50px;
 }
 
 .clock-icon {
