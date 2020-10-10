@@ -13,6 +13,14 @@ The styling was completed using the Bulma CSS framework, keeping the design simp
 ## Link to Deployed Application
 https://mathew-harvey.github.io/The-Bodyweight-Gym-Online/
 <br /> 
+
+## Authors
+Mat Harvey<br/>
+Andrew Kelleher<br/>
+Jamie Sinclair<br/>
+Mark Wilson <br/>
+
+## Screenshots of the Application
  
  <strong>Home Page</strong>
 <br /> 
@@ -37,9 +45,3 @@ https://mathew-harvey.github.io/The-Bodyweight-Gym-Online/
 <strong>Stored favorited videos</strong>
 <br /> 
 ![favs](https://user-images.githubusercontent.com/62285850/95646680-a10e3a80-0afd-11eb-9e42-40b819ff654f.JPG)
-
-## Authors
-Mat Harvey
-Andrew Kelleher
-Jamie Sinclair
-Mark Wilson 
