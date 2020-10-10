@@ -32,7 +32,8 @@
         <div class="modal-content">
             <img class="center" src="./assets/img/TBWG Logo_1.png" width="400px">
             <div class="center">
-                <br /> Welcome to The Bodyweight Gym Online!<br />Please take a second to create your profile.<br /><br /> Name:
+                <br /> Welcome to The Bodyweight Gym Online!<br />Please take a second to create your
+                profile.<br /><br /> Name:
                 <br /><input id="login-name"><br /><br /> City:
                 <br /><input id="login-location"><br /><br />
                 <button id="login-submit">Continue</button>
@@ -69,69 +70,60 @@
     </nav>
 
     <!-- Introductory Video -->
-    <section class="hero is-link is-medium">
+    <section class="hero is-link is-medium" id="bodyweight-video">
         <video autoplay muted loop>
-                <source src=".\assets\img\Small Upbeat Video_Trim.mp4" id="heroVideo" type="video/mp4">
-            </video>            
-    </section>
-    <div class="container">
-        <!-- Introductory Text -->
-        <section class="hero is-link">
-            <div class="hero-body">
-
-                <p class="title">
-                    The Bodyweight Gym Online
-                </p>
-                <p class="subtitle">
-                    Welcome to your virtual classroom. We will take you through a follow along workout you can do at home with no or very little equipment needed. We take you through some interesting exercise variations as well as the reps and sets. You are going to get
-                    a sweat on, build some strength and have fun!
-                </p>
-
-            </div>
-        </section>
-
-        <!-- Filter Area -->
-        <section class="section">
-            <div class="container">
-                <div class="panel is-dark">
-                    <!-- Filter Panel Heading -->
-                    <p class="panel-heading">
-                        Filter our videos:
+            <source src=".\assets\img\Small Upbeat Video_Trim.mp4" id="heroVideo" type="video/mp4">
+        </video>
+        <section id="bodyweight-text" class="hero is-link">
+            <div class="hero-body" id="bodyweight-container">
+                <div class="container">
+                    <p class="title">
+                        The Bodyweight Gym Online
                     </p>
-                    <!-- Workout Filters Go Here -->
-                    <div class="panel-block" id="theWorkouts"></div>
-                    <!-- Coach Filters Go Here -->
-                    <div class="panel-block" id="theCoaches"></div>
+                    <p class="subtitle">
+                        Welcome to your virtual classroom. We will take you through a follow along workout you can do at
+                        home with no or very little equipment needed. We take you through some interesting exercise
+                        variations as well as the reps and sets. You are going to get a sweat on, build some strength
+                        and have fun!
+                    </p>
                 </div>
-                <!-- Spacer -->
-                <br />
-                <!-- The Filtered Videos are Displayed Here -->
-                <div id="video-display"></div>
-            </div>
+            </div> 
         </section>
+        <p class="scrolldown is-desktop"><i class="fas fa-arrow-down"></i>&nbsp;&nbsp;Scroll down to begin&nbsp;&nbsp;<i class="fas fa-arrow-down"></i></p>
+    </section>
+
+    <!-- Filter Area -->
+    <section class="section">
+        <div class="container">
+            <div class="panel is-link">
+                <!-- Filter Panel Heading -->
+                <p class="panel-heading">
+                    Filter our videos:
+                </p>
+                <!-- Workout Filters Go Here -->
+                <div class="panel-block" id="theWorkouts"></div>
+                <!-- Coach Filters Go Here -->
+                <div class="panel-block" id="theCoaches"></div>
+            </div>
+            <!-- Spacer -->
+            <br />
+            <!-- The Filtered Videos are Displayed Here -->
+            <div id="video-display"></div>
+        </div>
+    </section>
     </div>
     <!-- Footer -->
-    <div class="footer">
-        <div class="column"></div>
+    <div class="footer">       
         <div class="column" id="copyright">
-            &copy; 2020 | Team 4
-        </div>
-        <div class="column" id="favicons">
-            <a class="faviconBtn" href="https://www.facebook.com " target="_blank ">
-                <i class="fab fa-facebook-f "></i>
-            </a>
-            <a class="faviconBtn" href="https://www.instagram.com " target="_blank ">
-                <i class="fab fa-instagram "></i>
-            </a>
-            <a class="faviconBtn" href="https://www.twitter.com " target="_blank ">
-                <i class="fab fa-twitter "></i>
-            </a>
+            &copy; 2020 | The Bodyweight Gym Online<br/>
+            <a class="contact" href="mailto:mat@thebodyweightgym.net">mat@thebodyweightgym.net</a>
         </div>
     </div>
 
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src="./assets/scripts/script.js"></script>
     <!--Checks if page is index.html for login.js-->
     <script type="text/javascript">
