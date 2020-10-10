@@ -11,22 +11,26 @@ The styling was completed using the Bulma CSS framework, keeping the design simp
 <br />
 Deploy Application Here: 
 <br />
-  <p>
-    Home Page
+
+ Home Page
+ <br />
 ![index](https://user-images.githubusercontent.com/62285850/95645757-d06c7980-0af4-11eb-8419-ec57f07ac3c2.JPG)
-    </p>
-    <p>Video Filter Function
+<br />
+Video Filter Function
 ![videofilter](https://user-images.githubusercontent.com/62285850/95645761-dfebc280-0af4-11eb-8213-1c3f4e75ae43.JPG)
-  </p>
-  <p>Video display page
+<br />
+Video display page
+<br />
 ![player](https://user-images.githubusercontent.com/62285850/95645765-ebd78480-0af4-11eb-99ac-f1bce397c021.JPG)
-  </p>
-  <p>Timer Overlay
+<br />
+Timer Overlay
+<br />
 ![timer](https://user-images.githubusercontent.com/62285850/95645766-f1cd6580-0af4-11eb-9906-bd41b015951f.JPG)
-  </p>
-  <p>Motivational gif Modal
+<br />
+Motivational gif Modal
+<br />
 ![chucknorris](https://user-images.githubusercontent.com/62285850/95645769-fb56cd80-0af4-11eb-921b-1b73da96d722.JPG)
-  </p>
-  <p>Stored favorited videos
+<br />
+Stored favorited videos
+<br />
 ![favs](https://user-images.githubusercontent.com/62285850/95645771-feea5480-0af4-11eb-98a1-0521df3419a3.JPG)
-</p>
