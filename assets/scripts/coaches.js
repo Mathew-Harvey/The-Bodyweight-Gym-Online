@@ -6,32 +6,32 @@ const $theCoaches = {
     // Coach 1
     0: {
         "name": "Corey",
-        "colour": "is-bodyweight"
+        "colour": "is-bodyweightcoach"
     },
     // Coach 2
     1: {
         "name": "Maisie",
-        "colour": "is-bodyweight"
+        "colour": "is-bodyweightcoach"
     },
     // Coach 3
     2: {
         "name": "Mikhail",
-        "colour": "is-bodyweight"
+        "colour": "is-bodyweightcoach"
     },
     // Coach 4
     3: {
         "name": "Ray",
-        "colour": "is-bodyweight"
+        "colour": "is-bodyweightcoach"
     },
     // Coach 5
     4: {
         "name": "Oscar",
-        "colour": "is-bodyweight"
+        "colour": "is-bodyweightcoach"
     },
     // Coach 6
     5: {
         "name": "Kelvin",
-        "colour": "is-bodyweight"
+        "colour": "is-bodyweightcoach"
     }
 
 }
