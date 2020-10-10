@@ -57,65 +57,65 @@ $(document).ready(function () {
         // Display the default loader
         $("#chucknorris-quote").html('<i class="fas fa-spinner fa-pulse"></i>');
         $(".modal-chucknorris").addClass("is-active");
-    
+
         // Reset the content
         $chuckJoke = undefined;
         $chuckGif = undefined;
-    
+
         // Chuck Norris Joke
         // The URL of the API that we are calling
         var jokeURL = `http://api.icndb.com/jokes/random`;
-    
+
         // Ajax call to Chuck API
         $.ajax({
-    
+
             url: jokeURL,
             method: "GET",
-    
+
             success: function (data) {
-    
+
                 $chuckJoke = data.value.joke;
-    
+
                 // Check to see if both API calls have returned
                 addChuck();
             },
             error: function () {
-    
+
                 $chuckJoke = "Chuck Norris says GET BACK TO WORK!";
-    
+
                 // Check to see if both API calls have returned
                 addChuck();
             }
         });
-    
+
         // Chuck Norris Gif
         // The URL of the API that we are calling
         var gifURL = "https://api.giphy.com/v1/gifs/random?api_key=hrrTWaVX6XfTcRor8CeKuIB7G8mG2q9R&tag=chucknorris";
-    
+
         // The ajax method to call the query and retrieve the data
         $.ajax({
-    
+
             url: gifURL,
             method: "GET",
-    
+
             success: function (chuckster) {
-    
+
                 // The URL of the image that we've created
                 $chuckGif = chuckster.data.image_original_url;
-    
+
                 // Check to see if both API calls have returned
                 addChuck();
-    
+
             },
             error: function () {
-    
+
                 // Creates a new img object 
                 $chuckGif = "./assets/img/chucknorris.png";
-    
+
                 // Check to see if both API calls have returned
                 addChuck();
             }
         })
-    
+
     })
 })

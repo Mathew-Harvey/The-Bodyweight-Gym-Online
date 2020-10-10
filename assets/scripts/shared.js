@@ -54,7 +54,7 @@ function heartVideo(which) {
 function finishVideo(which) {
 
     which = parseInt(which);
-    
+
     var $arrayPos = $.inArray(which, $watchedVideos);
 
     if ($arrayPos == -1) {

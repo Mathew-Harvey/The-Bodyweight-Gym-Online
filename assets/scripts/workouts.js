@@ -1,5 +1,6 @@
 // The workout types for videos
-// The workout types for videos
+// Colours is meant to allow for custom colours per workout, 
+// but we decided to just use one instead on review
 const $theWorkouts = {
 
     // Workout 1

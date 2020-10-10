@@ -281,7 +281,7 @@ function displayCoaches() {
 }
 
 // Check the document is ready
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Display the default filters and video
     displayWorkouts();
@@ -290,48 +290,48 @@ $(document).ready(function() {
 
     // Filter Clicks
     // Workouts
-    $(document).on("click", ".workout-filter", function() {
+    $(document).on("click", ".workout-filter", function () {
 
-            // Retrieve the Filter Data
-            var $whichWorkout = $(this).data("filter");
+        // Retrieve the Filter Data
+        var $whichWorkout = $(this).data("filter");
 
-            // Set the filters to the current selection
-            $workoutFilterSelected = $whichWorkout;
+        // Set the filters to the current selection
+        $workoutFilterSelected = $whichWorkout;
 
-            // Display the changed filters
-            displayWorkouts();
-            displayVideos();
+        // Display the changed filters
+        displayWorkouts();
+        displayVideos();
 
-        })
-        // Coaches
-    $(document).on("click", ".coach-filter", function() {
+    })
+    // Coaches
+    $(document).on("click", ".coach-filter", function () {
 
-            // Retrieve the Filter Data
-            var $whichCoach = $(this).data("filter");
+        // Retrieve the Filter Data
+        var $whichCoach = $(this).data("filter");
 
-            // Set the filters to the current selection
-            $coachFilterSelected = $whichCoach;
+        // Set the filters to the current selection
+        $coachFilterSelected = $whichCoach;
 
-            // Display the changed filters
-            displayCoaches();
-            displayVideos();
+        // Display the changed filters
+        displayCoaches();
+        displayVideos();
 
-        })
-        // Hearts
-    $(document).on("click", ".heart", function() {
+    })
+    // Hearts
+    $(document).on("click", ".heart", function () {
 
-            // Retrieve the Filter Data
-            var $whichVideo = $(this).data("video");
+        // Retrieve the Filter Data
+        var $whichVideo = $(this).data("video");
 
-            // Add a heart to a video
-            heartVideo($whichVideo);
+        // Add a heart to a video
+        heartVideo($whichVideo);
 
-            // Display the videos again
-            displayVideos();
+        // Display the videos again
+        displayVideos();
 
-        })
-        // Videos
-    $(document).on("click", ".overlay", function() {
+    })
+    // Videos
+    $(document).on("click", ".overlay", function () {
 
         // Retrieve the Filter Data
         var $whichVideo = $(this).data("video");

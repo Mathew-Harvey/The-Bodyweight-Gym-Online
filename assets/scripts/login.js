@@ -17,18 +17,18 @@ if (localStorage.getItem("userProfile") === null) {
 }
 
 // Check if user submits login
-$("#login-submit").on("click", function() {
+$("#login-submit").on("click", function () {
     if ($("#login-name").val() != "" && $("#login-location").val() != "") {
         var url = `https://api.openweathermap.org/data/2.5/weather?q=${$("#login-location").val()}&units=metric&appid=256b25d2b8a8f2b130f652e84d69f8ee`;
         $.ajax({
             url: url,
-            success: function(data) {
+            success: function (data) {
                 // create object
                 var profileObj = {
-                        name: $("#login-name").val(),
-                        location: data.name
-                    }
-                    // save object to local storage
+                    name: $("#login-name").val(),
+                    location: data.name
+                }
+                // save object to local storage
                 localStorage.setItem("userProfile", JSON.stringify(profileObj));
                 // update navbar buttons
                 $(".modal").removeClass("is-active");
@@ -45,7 +45,7 @@ $("#login-submit").on("click", function() {
                     $("#weather-txt").html("Train <strong>inside</strong> today");
                 }
             },
-            error: function() {
+            error: function () {
                 $("#login-error").text("City not found. Please try again.");
             }
         });
@@ -55,20 +55,20 @@ $("#login-submit").on("click", function() {
 })
 
 // make sure all scripts are loaded before executing
-$(document).ready(function() {
+$(document).ready(function () {
     // check if create profile is clicked
-    $("#create-profile").on("click", function(event) {
+    $("#create-profile").on("click", function (event) {
         event.preventDefault();
         $(".modal").addClass("is-active");
     })
 
     // check if create profile is clicked
-    $(".signup").on("click", function() {
+    $(".signup").on("click", function () {
         $(".modal").addClass("is-active")
     })
 
     // check close login modal
-    $(".modal-close").on("click", function(event) {
+    $(".modal-close").on("click", function (event) {
         $(".modal").removeClass("is-active");
     })
 })

@@ -7,11 +7,11 @@ var $loadThisVideo;
 // Function to update the tags on button press
 function updateTags(which) {
 
-    console.log("Update tags");
-
+    // Retrieve the values for this video
     var $thisWorkout = $theVideos[which].tags;
     var $thisCoach = $theVideos[which].coach;
 
+    // Retrieve and empty the tag div
     var $newTags = $('.video-tags');
     $newTags.empty();
 
@@ -84,13 +84,16 @@ function loadVideo() {
         }
     }
 
+    // Add the vimeo link to the page
     var $whichLink = $theVideos[$loadThisVideo].link;
-    $videoPlayerEl.html('<iframe src="https://' + $whichLink + '" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>');
+    $videoPlayerEl.html('<iframe src="https://' + $whichLink + '" width="100%" height="100%" frameborder="0" align="top" allow="autoplay; fullscreen" allowfullscreen></iframe>');
 
+    // Retrieve the player
     var iframe = document.querySelector('iframe');
     var player = new Vimeo.Player(iframe);
 
-    player.on('ended', function() {
+    // Check when video ends, to mark as complete
+    player.on('ended', function () {
         console.log('Ended the video');
 
         finishVideo($loadThisVideo);
@@ -103,18 +106,19 @@ function loadVideo() {
     $newTags.attr("class", "tags are-medium video-tags spacer");
     $videoPlayerEl.append($newTags);
 
+    // Update tags
     updateTags($loadThisVideo);
 
 }
 
-
-$(document).ready(function() {
+// Check if Document is Ready
+$(document).ready(function () {
 
     loadVideo();
     console.log("[LOAD VIDEO] " + $loadThisVideo);
 
     // Hearts
-    $(document).on("click", ".heart", function() {
+    $(document).on("click", ".heart", function () {
 
         // Retrieve the Filter Data
         var $whichVideo = $(this).data("video");
