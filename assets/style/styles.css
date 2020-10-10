@@ -2,9 +2,11 @@
     padding: 0 auto;
     min-height: calc(80vh - 100px);
 }
+
 .panel-heading {
     background-color: #3273dc !important;
 }
+
 .scrolldown {
 
     position: absolute;
@@ -14,6 +16,7 @@
     z-index: 200;
     width: 100%;
 }
+
 #bodyweight-container {
     display: flex;
     align-items: center;
@@ -22,9 +25,11 @@
 .contact a {
     color: #3273dc;
 }
+
 .contact:hover {
     color: #3273dc;
 }
+
 .contact:visited {
     color: #3273dc;
 }
@@ -89,6 +94,10 @@
 
 .weather-icon {
     margin-bottom: -10px
+}
+
+.modal-login {
+    z-index: 300;
 }
 
 .modal-login .modal-content {
