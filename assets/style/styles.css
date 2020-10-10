@@ -1,14 +1,33 @@
+/* Favourites */
+
 .favourites-container {
     padding: 0 auto;
     min-height: calc(80vh - 100px);
 }
 
+/* Filter Area */
+
 .panel-heading {
     background-color: #3273dc !important;
 }
 
-.scrolldown {
+/* Filter Colours */
 
+.is-bodyweight {
+    background-color: #3364AF !important;
+    color: white !important;
+}
+
+.is-light {
+    background-color: #AEC4E4 !important;
+    color: white !important;
+}
+
+/* Hero Section */
+
+/* + Bodyweight Hero */
+
+.scrolldown {
     position: absolute;
     bottom: 15px;
     text-align: center;
@@ -22,6 +41,36 @@
     align-items: center;
 }
 
+#bodyweight-text {
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* #3273dc; */
+    position: absolute;
+    height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+    #bodyweight-text {
+        display: none;
+    }
+}
+
+#bodyweight-video {
+    position: relative;
+}
+
+#heroBody {
+    padding: 5px;
+    margin: 5px;
+}
+
+.hero {
+    background-color: #1D201F;
+    width: 100%;
+}
+
+/* Contact Email Link */
+
 .contact a {
     color: #3273dc;
 }
@@ -34,131 +83,17 @@
     color: #3273dc;
 }
 
-#bodyweight-text{
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.5); /* #3273dc; */ 
-    position: absolute;
-    height: 100%;
-}
-@media screen and (max-width: 960px) {
-    #bodyweight-text{
-        display: none;
-    }
-}
+/* Navbar */
+
 @media screen and (max-width: 1024px) {
-.navbar-end {
-    padding-left: 30px;
-}
-}
-    
-#bodyweight-video {
-    position: relative;
-}
-
-#heroBody {
-    padding: 5px;
-    margin: 5px;
-}
-
-.column-section {
-    background-color: rgb(228, 228, 228);
-}
-
-.column-section:hover {
-    background-color: rgb(248, 248, 248);
-}
-
-.chucknorris-btn {
-    background: transparent;
-    border: none;
-    outline: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 16px;
-    cursor: pointer;
+    .navbar-end {
+        padding-left: 30px;
+    }
 }
 
 .home-btn {
     margin-right: 0 !important;
     margin-left: 0.5rem;
-}
-
-.timer-btn {
-    background: transparent;
-    border: none;
-    outline: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 16px;
-    cursor: pointer;
-}
-.timer-btn i {
-    font-size: 50px;
-}
-
-.clock-icon {
-    font-size: 40px;
-}
-
-.weather-icon {
-    margin-bottom: -10px
-}
-
-.modal-login {
-    z-index: 300;
-}
-
-.modal-login .modal-content {
-    background-color: white;
-    padding-bottom: 40px;
-}
-
-.modal-chucknorris .modal-content {
-    background-color: white;
-    min-height: 350px;
-    border-radius: 10px;
-}
-
-.fullheight {
-    height: 100%;
-}
-
-.chucknorris-quote {
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    text-align: center;
-}
-
-.userProfile-name {
-    margin-top: -8px;
-}
-
-.userProfile-name strong {
-    color: white;
-}
-
-#login-error {
-    color: red;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    text-align: center;
-}
-
-.hero {
-    background-color: #1D201F;
-    width: 100%;
-}
-
-.title,
-.subtitle {
-    color: lightgrey;
-    padding: 10px;
 }
 
 .navbar {
@@ -172,9 +107,131 @@
     margin: 20px 0 20px 40px;
 }
 
-#signUp,
-#logIn {
+/* Column Rollovers */
+
+.column-section {
+    background-color: rgb(228, 228, 228);
+}
+
+.column-section:hover {
+    background-color: rgb(248, 248, 248);
+}
+
+/* Chuck Norris Section */
+
+.chucknorris-btn {
+    background: transparent;
+    border: none;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-chucknorris .modal-content {
+    background-color: white;
+    min-height: 350px;
+    border-radius: 10px;
+}
+
+.chucknorris-quote {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+
+/* Timer */
+
+.timer-btn {
+    background: transparent;
+    border: none;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.timer-btn i {
+    font-size: 50px;
+}
+
+.clock-icon {
+    font-size: 40px;
+}
+
+/* Weather */
+
+.weather-icon {
+    margin-bottom: -10px
+}
+
+/* Login */
+
+.modal-login {
+    z-index: 300;
+}
+
+.modal-login .modal-content {
+    background-color: white;
+    padding-bottom: 40px;
+}
+
+#login-error {
+    color: red;
+}
+
+.fullheight {
+    height: 100%;
+}
+
+#signUp, #logIn {
     margin: 20px 0 40px 20px;
+}
+
+/* User Profile */
+
+.userProfile-name {
+    margin-top: -8px;
+}
+
+.userProfile-name strong {
+    color: white;
+}
+
+/* Favourites */
+
+#favicons {
+    text-align: right;
+}
+
+.faviconBtn {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(245, 245, 49);
+    color: rgb(52, 100, 172);
+    border-radius: 10px;
+}
+
+#favourites-display {
+    min-height: calc(75vh - 190px);
+}
+
+/* Generic CSS */
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.title, .subtitle {
+    color: lightgrey;
+    padding: 10px;
 }
 
 .footer {
@@ -191,25 +248,11 @@
     color: white;
 }
 
-#favicons {
-    text-align: right;
-}
-
-.faviconBtn {
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(245, 245, 49);
-    color: rgb(52, 100, 172);
-    border-radius: 10px;
-}
-
 #apiCalls {
     margin: 0px 0 5px 0;
 }
 
-#weatherIconColumn,
-#motivationGifColumn,
-#timerBtns {
+#weatherIconColumn, #motivationGifColumn, #timerBtns {
     justify-items: center;
 }
 
@@ -223,6 +266,7 @@ a:hover {
     background: transparent;
     float: left;
 }
+
 /* Video Thumbnails */
 
 .overlay {
@@ -238,7 +282,6 @@ a:hover {
 .overlay:hover img {
     opacity: 0.8;
 }
-
 
 /* Video Play Icon */
 
@@ -256,17 +299,12 @@ a:hover {
 }
 
 #videoplayer {
-    height: calc(100vh - 190px);
-}
-
-#favourites-display {
-    min-height: calc(75vh - 190px);
+    height: calc(80vh);
 }
 
 .spacer {
     margin-top: 15px;
 }
-
 
 /* Tooltips */
 
@@ -293,14 +331,4 @@ a:hover {
     .navbar-menu p {
         color: white;
     }
-}
-
-.is-bodyweight {
-    background-color: #3364AF !important;
-    color: white !important;
-}
-
-.is-light {
-    background-color: #AEC4E4 !important;
-    color: white !important;
 }

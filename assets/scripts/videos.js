@@ -1,4 +1,5 @@
 // The video object
+// Screenshots should be saved at 960x540
 const $theVideos = {
 
     // Video 1

@@ -86,7 +86,7 @@ function loadVideo() {
 
     // Add the vimeo link to the page
     var $whichLink = $theVideos[$loadThisVideo].link;
-    $videoPlayerEl.html('<iframe src="https://' + $whichLink + '" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>');
+    $videoPlayerEl.html('<iframe src="https://' + $whichLink + '" width="100%" height="100%" frameborder="0" align="top" allow="autoplay; fullscreen" allowfullscreen></iframe>');
 
     // Retrieve the player
     var iframe = document.querySelector('iframe');
