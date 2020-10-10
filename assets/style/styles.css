@@ -152,7 +152,12 @@ a:hover {
     color: #000;
 }
 
-
+.floating-text {
+    z-index: 100;
+    top: -50px;
+    background: transparent;
+    float: left;
+}
 /* Video Thumbnails */
 
 .overlay {
@@ -204,7 +209,7 @@ a:hover {
     z-index: 100;
     display: none;
     padding: 14px 20px;
-    margin-top: 150px;
+    margin-top: -150px;
     margin-left: 0px;
 }
 
