@@ -114,3 +114,5 @@ const $theVideos = {
         "screenshot": "./assets/img/previews/prev14.png"
     }
 }
+
+//screenshot needs to be 960x540
