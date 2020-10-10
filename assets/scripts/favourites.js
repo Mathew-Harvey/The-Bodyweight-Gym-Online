@@ -131,27 +131,27 @@ function displayFavourites() {
 }
 
 // Check the document is ready
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Display the favourites
     displayFavourites();
 
     // Filter Clicks
     // Hearts
-    $(document).on("click", ".heart", function() {
+    $(document).on("click", ".heart", function () {
 
-            // Retrieve the Filter Data
-            var $whichVideo = $(this).data("video");
+        // Retrieve the Filter Data
+        var $whichVideo = $(this).data("video");
 
-            // Add a heart to a video
-            heartVideo($whichVideo);
+        // Add a heart to a video
+        heartVideo($whichVideo);
 
-            // Display the videos again
-            displayFavourites();
+        // Display the videos again
+        displayFavourites();
 
-        })
-        // Videos
-    $(document).on("click", ".overlay", function() {
+    })
+    // Videos
+    $(document).on("click", ".overlay", function () {
 
         // Retrieve the Filter Data
         var $whichVideo = $(this).data("video");

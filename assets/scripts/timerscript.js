@@ -14,8 +14,8 @@ minutesCount = 0, secondCount = 0, centiSecondCount = 0
 
 var showTimer = false
 
-$(document).ready(function() {
-    $('#showTimer').click(function() {
+$(document).ready(function () {
+    $('#showTimer').click(function () {
         if (showTimer == true) {
             showTimer = false
             $("#timerEl").toggleClass("shownTimer");
@@ -37,12 +37,12 @@ function startSW() {
     $("#resetCount").removeAttr('disabled');
     $("#startCount").attr({ 'disabled': 'disabled' });
 
-    minutessetInterval = setInterval(function() {
+    minutessetInterval = setInterval(function () {
         minutesCount += 1
         minutes.innerHTML = minutesCount
     }, 60000)
 
-    secondsetInterval = setInterval(function() {
+    secondsetInterval = setInterval(function () {
         secondCount += 1
         if (secondCount > 59) {
             secondCount = 1
@@ -54,7 +54,7 @@ function startSW() {
         second.innerHTML = secondCount
     }, 1000)
 
-    centiSecondsetInterval = setInterval(function() {
+    centiSecondsetInterval = setInterval(function () {
         centiSecondCount += 1
         if (centiSecondCount > 99) {
             centiSecondCount = 1
@@ -108,7 +108,7 @@ function stopMetronome() {
     beepInt = -1
 }
 
-$('#metronomeStart').click(function() {
+$('#metronomeStart').click(function () {
     if (beepInt == -1) {
         startMetronome();
         $(this).html('<img src="./assets/img/metronome50.png" alt="metronome image" /><br />Stop Metronome');

@@ -1,4 +1,6 @@
 // The coaches for videos
+// Colours is meant to allow for custom colours per coach, 
+// but we decided to just use one instead on review
 const $theCoaches = {
 
     // Coach 1
