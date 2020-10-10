@@ -16,7 +16,7 @@ Deploy Application Here: https://mathew-harvey.github.io/The-Bodyweight-Gym-Onli
 ![index](https://user-images.githubusercontent.com/62285850/95645757-d06c7980-0af4-11eb-8419-ec57f07ac3c2.JPG)
 <br /> 
 Video Filter Function
-  <br />
+ <br />
 ![videofilter](https://user-images.githubusercontent.com/62285850/95645761-dfebc280-0af4-11eb-8213-1c3f4e75ae43.JPG)
 <br /> 
 Video display page
