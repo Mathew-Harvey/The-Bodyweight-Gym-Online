@@ -1,25 +1,26 @@
 // The workout types for videos
+// The workout types for videos
 const $theWorkouts = {
 
     // Workout 1
     0: {
         "name": "Strength",
-        "colour": "#EDF02D"
+        "colour": "is-danger"
     },
     // Workout 2
     1: {
         "name": "Mobility",
-        "colour": "#177FEE"
+        "colour": "is-success"
     },
     // Workout 3
     2: {
         "name": "Handstands",
-        "colour": "#17C0EE"
+        "colour": "is-warning"
     },
     // Workout 4
     3: {
         "name": "Conditioning",
-        "colour": "#EEAA17"
+        "colour": "is-info"
     }
 
 }

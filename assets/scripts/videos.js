@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // The video object
 const $theVideos = {
 
@@ -115,6 +114,3 @@ const $theVideos = {
         "screenshot": "./assets/img/previews/prev14.png"
     }
 }
-=======
-
->>>>>>> af4b38836b5be67ea101f94894c5059ff690f3a9

@@ -42,8 +42,7 @@ function updateTags(which) {
     var $newIcon = $('<i>');
     if ($.inArray(which, $likedVideos) == -1) {
         $newIcon.attr("class", "far fa-heart");
-    }
-    else {
+    } else {
         $newIcon.attr("class", "fas fa-heart");
     }
     $newHeart.append($newIcon);
@@ -55,8 +54,7 @@ function updateTags(which) {
     var $newTick = $('<i>');
     if ($.inArray(which, $watchedVideos) == -1) {
         $newTick.attr("class", "far fa-check-circle");
-    }
-    else {
+    } else {
         $newTick.attr("class", "fas fa-check-circle");
     }
     $newViewed.append($newTick);
@@ -92,7 +90,7 @@ function loadVideo() {
     var iframe = document.querySelector('iframe');
     var player = new Vimeo.Player(iframe);
 
-    player.on('ended', function () {
+    player.on('ended', function() {
         console.log('Ended the video');
 
         finishVideo($loadThisVideo);
@@ -110,13 +108,13 @@ function loadVideo() {
 }
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     loadVideo();
     console.log("[LOAD VIDEO] " + $loadThisVideo);
 
     // Hearts
-    $(document).on("click", ".heart", function () {
+    $(document).on("click", ".heart", function() {
 
         // Retrieve the Filter Data
         var $whichVideo = $(this).data("video");

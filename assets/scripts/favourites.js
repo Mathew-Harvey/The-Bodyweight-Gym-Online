@@ -75,8 +75,7 @@ function displayFavourites() {
         var $newIcon = $('<i>');
         if ($.inArray($likedVideos[v], $likedVideos) == -1) {
             $newIcon.attr("class", "far fa-heart");
-        }
-        else {
+        } else {
             $newIcon.attr("class", "fas fa-heart");
         }
         $newHeart.append($newIcon);
@@ -88,8 +87,7 @@ function displayFavourites() {
         var $newTick = $('<i>');
         if ($.inArray($likedVideos[v], $watchedVideos) == -1) {
             $newTick.attr("class", "far fa-check-circle");
-        }
-        else {
+        } else {
             $newTick.attr("class", "fas fa-check-circle");
         }
         $newViewed.append($newTick);
@@ -133,27 +131,27 @@ function displayFavourites() {
 }
 
 // Check the document is ready
-$(document).ready(function () {
+$(document).ready(function() {
 
     // Display the favourites
     displayFavourites();
 
     // Filter Clicks
     // Hearts
-    $(document).on("click", ".heart", function () {
+    $(document).on("click", ".heart", function() {
 
-        // Retrieve the Filter Data
-        var $whichVideo = $(this).data("video");
+            // Retrieve the Filter Data
+            var $whichVideo = $(this).data("video");
 
-        // Add a heart to a video
-        heartVideo($whichVideo);
+            // Add a heart to a video
+            heartVideo($whichVideo);
 
-        // Display the videos again
-        displayFavourites();
+            // Display the videos again
+            displayFavourites();
 
-    })
-    // Videos
-    $(document).on("click", ".overlay", function () {
+        })
+        // Videos
+    $(document).on("click", ".overlay", function() {
 
         // Retrieve the Filter Data
         var $whichVideo = $(this).data("video");
