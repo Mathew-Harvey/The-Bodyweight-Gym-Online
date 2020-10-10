@@ -12,26 +12,26 @@ The styling was completed using the Bulma CSS framework, keeping the design simp
 Deploy Application Here: https://mathew-harvey.github.io/The-Bodyweight-Gym-Online/
 <br /> 
  
- Home Page
+ <strong>Home Page</strong>
 <br /> 
 ![index](https://user-images.githubusercontent.com/62285850/95646663-8045e500-0afd-11eb-87c6-e2f16b0de9f8.JPG)
 <br /> 
-Video Filter Function
+<strong>Video Filter Function</strong>
  <br />
 ![videofilter](https://user-images.githubusercontent.com/62285850/95646666-89cf4d00-0afd-11eb-8154-9233da14e0d8.JPG)
 <br /> 
-Video display page
+<strong>Video display page</strong>
 <br /> 
 ![player](https://user-images.githubusercontent.com/62285850/95646669-8fc52e00-0afd-11eb-8d23-a41cddfba640.JPG)
 <br> 
-Timer Overlay
+<strong>Timer Overlay</strong>
 <br />
 ![timer](https://user-images.githubusercontent.com/62285850/95646675-98b5ff80-0afd-11eb-8486-b783c3f7ac8a.JPG)
 <br> 
-Motivational gif Modal
+<strong>Motivational gif Modal</strong>
 <br /> 
 ![chucknorris](https://user-images.githubusercontent.com/62285850/95646678-9e134a00-0afd-11eb-89ec-6f7fae77f0ce.JPG)
 <br /> 
-Stored favorited videos
+<strong>Stored favorited videos</strong>
 <br /> 
 ![favs](https://user-images.githubusercontent.com/62285850/95646680-a10e3a80-0afd-11eb-9e42-40b819ff654f.JPG)
