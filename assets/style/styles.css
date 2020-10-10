@@ -187,7 +187,7 @@
 }
 
 #apiCalls {
-    margin: 50px 0 5px 0;
+    margin: 0px 0 5px 0;
 }
 
 #weatherIconColumn,
@@ -257,7 +257,7 @@ a:hover {
     z-index: 100;
     display: none;
     padding: 14px 20px;
-    margin-top: -150px;
+    margin-top: 150px;
     margin-left: 0px;
 }
 
@@ -276,4 +276,14 @@ a:hover {
     .navbar-menu p {
         color: white;
     }
+}
+
+.is-bodyweight {
+    background-color: #3364AF !important;
+    color: white !important;
+}
+
+.is-light {
+    background-color: #AEC4E4 !important;
+    color: white !important;
 }
