@@ -11,26 +11,27 @@ The styling was completed using the Bulma CSS framework, keeping the design simp
 <br /> 
 Deploy Application Here: https://mathew-harvey.github.io/The-Bodyweight-Gym-Online/
 <br /> 
+ 
  Home Page
 <br /> 
-![index](https://user-images.githubusercontent.com/62285850/95645757-d06c7980-0af4-11eb-8419-ec57f07ac3c2.JPG)
+![index](https://user-images.githubusercontent.com/62285850/95646663-8045e500-0afd-11eb-87c6-e2f16b0de9f8.JPG)
 <br /> 
 Video Filter Function
  <br />
-![videofilter](https://user-images.githubusercontent.com/62285850/95645761-dfebc280-0af4-11eb-8213-1c3f4e75ae43.JPG)
+![videofilter](https://user-images.githubusercontent.com/62285850/95646666-89cf4d00-0afd-11eb-8154-9233da14e0d8.JPG)
 <br /> 
 Video display page
 <br /> 
-![player](https://user-images.githubusercontent.com/62285850/95645765-ebd78480-0af4-11eb-99ac-f1bce397c021.JPG)
+![player](https://user-images.githubusercontent.com/62285850/95646669-8fc52e00-0afd-11eb-8d23-a41cddfba640.JPG)
 <br> 
 Timer Overlay
 <br />
-![timer](https://user-images.githubusercontent.com/62285850/95645766-f1cd6580-0af4-11eb-9906-bd41b015951f.JPG)
+![timer](https://user-images.githubusercontent.com/62285850/95646675-98b5ff80-0afd-11eb-8486-b783c3f7ac8a.JPG)
 <br> 
 Motivational gif Modal
 <br /> 
-![chucknorris](https://user-images.githubusercontent.com/62285850/95645769-fb56cd80-0af4-11eb-921b-1b73da96d722.JPG)
+![chucknorris](https://user-images.githubusercontent.com/62285850/95646678-9e134a00-0afd-11eb-89ec-6f7fae77f0ce.JPG)
 <br /> 
 Stored favorited videos
 <br /> 
-![favs](https://user-images.githubusercontent.com/62285850/95645771-feea5480-0af4-11eb-98a1-0521df3419a3.JPG)
+![favs](https://user-images.githubusercontent.com/62285850/95646680-a10e3a80-0afd-11eb-9e42-40b819ff654f.JPG)
