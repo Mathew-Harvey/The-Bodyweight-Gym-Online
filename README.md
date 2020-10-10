@@ -1,7 +1,7 @@
 # The-Bodyweight-Gym-Online
 We've designed a sleek and user friendly follow along workout web application that helps users with their at home workout routines. 
 <br />
-This application was designed using HTML, CSS and Javascript.
+This application was designed using HTML, CSS, Javascript and JQuery.
 <br />
 <p>
 The styling was completed using the Bulma CSS framework, keeping the design simple and easy to follow. The user is asked to "log in" using a pop up modal, where the user is able to input their name and their location, which are both stored into local storage.
