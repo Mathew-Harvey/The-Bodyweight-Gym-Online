@@ -105,18 +105,25 @@
 }
 
 .modal-login {
-    z-index: 300;
+    z-index: 400;    
 }
 
 .modal-login .modal-content {
     background-color: white;
-    padding-bottom: 40px;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
 }
 
 .modal-chucknorris .modal-content {
     background-color: white;
     min-height: 350px;
     border-radius: 10px;
+    z-index: 400;  
+}
+
+.delete-account-btn {
+    color:red;
 }
 
 .fullheight {
@@ -128,6 +135,7 @@
     font-weight: 600;
     color: black;
     text-align: center;
+    z-index: 400;  
 }
 
 .userProfile-name {
@@ -165,6 +173,7 @@
     padding: 5px 5px 5px 5px;
     margin: 0 auto;
     width: 100vw;
+    z-index:300;
 }
 
 #navImg {

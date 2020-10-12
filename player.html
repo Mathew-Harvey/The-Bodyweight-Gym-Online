@@ -29,7 +29,8 @@
         <div class="modal-content">
             <div class="columns is-vcentered p-0 m-0 fullheight">
                 <div class="column">
-                    <div id="chucknorris-quote" class="chucknorris-quote"><i class="fas fa-spinner fa-pulse"></i><br />Loading ...</div>
+                    <div id="chucknorris-quote" class="chucknorris-quote"><i
+                            class="fas fa-spinner fa-pulse"></i><br />Loading ...</div>
                 </div>
             </div>
         </div>
@@ -41,10 +42,11 @@
         <div class="modal-content">
             <img class="center" src="./assets/img/TBWG Logo_1.png" width="400px">
             <div class="center">
-                <br /> Welcome to The Bodyweight Gym Online!<br />Please take a second to create your profile.<br /><br /> Name:
+                <br /> Welcome to The Bodyweight Gym Online!<br />Please take a second to fill in some basic
+                info.<br /><br /> Name:
                 <br /><input id="login-name"><br /><br /> City:
                 <br /><input id="login-location"><br /><br />
-                <button id="login-submit">Continue</button>
+                <button id="login-submit" class="button is-link">Continue</button>
                 <p id="login-error"></p>
             </div>
         </div>
@@ -67,7 +69,24 @@
                             <strong>Sign up</strong>
                         </a>
                         <p class="userProfile-name user-profile"></p>
-                        </a>
+                        <!-- Account dropdown -->
+                        <div class="dropdown is-right account-dropdown" data-click-state="1">
+                            <div class="dropdown-trigger">
+                                <a class="button is-dark account-btn user-profile" href="">
+                                    <i class="fas fa-user" style="color: #0078d7;"></i>
+                                </a>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item new-account-btn">
+                                        Create new account
+                                    </a>
+                                    <a class="dropdown-item delete-account-btn">
+                                        Delete account
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <a class="button is-dark favorites-btn user-profile home-btn" href="./index.html">
                             <strong><i class="fas fa-home" style="color: #0078d7;"></i></strong>
                         </a>
@@ -80,26 +99,28 @@
         </div>
     </nav>
 
-    <!--Bottom section-->
+    <!--Tools-->
     <div class="contianer">
         <div class="columns is-mobile" id="apiCalls">
             <!--Weather div-->
             <div class="column center column-section" id="weatherIconColumn">
-                <img id="weather-icon" class="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Weather icon" width="48px " />
+                <img id="weather-icon" class="weather-icon"
+                    src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Weather icon" width="48px " />
                 <p id="current-temp"></p>
                 <p id="weather-txt">Loading... </p>
             </div>
             <!--Chuck Norris div-->
             <div class="column center column-section">
                 <button class="chucknorris-btn"><img class="punch-img" src="./assets/img/punch-icon.png"
-                    alt="punch image" /><br />Motivation!</button>
+                        alt="punch image" /><br />Motivation!</button>
             </div>
             <div class="column center column-section">
-                <button id="showTimer" class="timer-btn"><i class="clock-icon fas fa-clock"></i><br />Show Timer</button>
+                <button id="showTimer" class="timer-btn"><i class="clock-icon fas fa-clock"></i><br />Show
+                    Timer</button>
             </div>
             <div class="column center column-section">
                 <button id="metronomeStart" class="timer-btn"><img src="./assets/img/metronome50dark.png "
-                alt="metronome image" /><br />Start Metronome</button>
+                        alt="metronome image" /><br />Start Metronome</button>
             </div>
         </div>
         <div id="videoplayer" class="container"></div>
@@ -124,9 +145,9 @@
     </div>
 
     <!-- Footer -->
-    <div class="footer">       
+    <div class="footer">
         <div class="column" id="copyright">
-            &copy; 2020 | The Bodyweight Gym Online<br/>
+            &copy; 2020 | The Bodyweight Gym Online<br />
             <a class="contact" href="mailto:mat@thebodyweightgym.net">mat@thebodyweightgym.net</a>
         </div>
     </div>
@@ -134,10 +155,6 @@
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js " type="text/javascript "></script>
     <script src="./assets/scripts/script.js "></script>
-    <!--Checks if page is index.html for login.js-->
-    <script type="text/javascript ">
-        const on_index = false;
-    </script>
     <script src="./assets/scripts/login.js "></script>
     <script src="./assets/scripts/timerscript.js "></script>
     <script src="./assets/scripts/shared.js "></script>

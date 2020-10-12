@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
     <script type="text/javascript" src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
     <link rel="icon" href="./assets/img/Favicon.gif">
-    
+
 </head>
 
 <body>
@@ -33,11 +33,11 @@
         <div class="modal-content">
             <img class="center" src="./assets/img/TBWG Logo_1.png" width="400px">
             <div class="center">
-                <br /> Welcome to The Bodyweight Gym Online!<br />Please take a second to create your
-                profile.<br /><br /> Name:
+                <br /> Welcome to The Bodyweight Gym Online!<br />Please take a second to fill in some basic
+                info.<br /><br /> Name:
                 <br /><input id="login-name"><br /><br /> City:
                 <br /><input id="login-location"><br /><br />
-                <button id="login-submit">Continue</button>
+                <button id="login-submit" class="button is-link">Continue</button>
                 <p id="login-error"></p>
             </div>
         </div>
@@ -60,7 +60,24 @@
                             <strong>Sign up</strong>
                         </a>
                         <p class="userProfile-name user-profile"></p>
-                        </a>
+                        <!-- Account dropdown -->
+                        <div class="dropdown is-right account-dropdown" data-click-state="1">
+                            <div class="dropdown-trigger">
+                                <a class="button is-dark account-btn user-profile" href="">
+                                    <i class="fas fa-user" style="color: #0078d7;"></i>
+                                </a>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item new-account-btn">
+                                        Create new account
+                                    </a>
+                                    <a class="dropdown-item delete-account-btn">
+                                        Delete account
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <a class="button is-dark favorites-btn user-profile" href="./favourites.html">
                             <i class="fas fa-heart" style="color: #0078d7;"></i>
                         </a>
@@ -88,9 +105,10 @@
                         and have fun!
                     </p>
                 </div>
-            </div> 
+            </div>
         </section>
-        <p class="scrolldown is-desktop"><i class="fas fa-arrow-down"></i>&nbsp;&nbsp;Scroll down to begin&nbsp;&nbsp;<i class="fas fa-arrow-down"></i></p>
+        <p class="scrolldown is-desktop"><i class="fas fa-arrow-down"></i>&nbsp;&nbsp;Scroll down to begin&nbsp;&nbsp;<i
+                class="fas fa-arrow-down"></i></p>
     </section>
 
     <!-- Filter Area -->
@@ -114,9 +132,9 @@
     </section>
     </div>
     <!-- Footer -->
-    <div class="footer">       
+    <div class="footer">
         <div class="column" id="copyright">
-            &copy; 2020 | The Bodyweight Gym Online<br/>
+            &copy; 2020 | The Bodyweight Gym Online<br />
             <a class="contact" href="mailto:mat@thebodyweightgym.net">mat@thebodyweightgym.net</a>
         </div>
     </div>
@@ -126,10 +144,6 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
         integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src="./assets/scripts/script.js"></script>
-    <!--Checks if page is index.html for login.js-->
-    <script type="text/javascript">
-        const on_index = true;
-    </script>
     <script src="./assets/scripts/login.js"></script>
     <script src="./assets/scripts/shared.js"></script>
     <script src="./assets/scripts/videos.js"></script>
