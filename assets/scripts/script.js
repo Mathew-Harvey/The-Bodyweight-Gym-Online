@@ -23,3 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+$('video').on('ended', function () {
+    this.load();
+    this.play();
+});

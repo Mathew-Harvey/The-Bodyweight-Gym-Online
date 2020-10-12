@@ -53,6 +53,8 @@ function heartVideo(which) {
 // Function to mark a video as complete
 function finishVideo(which) {
 
+    which = parseInt(which);
+
     var $arrayPos = $.inArray(which, $watchedVideos);
 
     if ($arrayPos == -1) {

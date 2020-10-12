@@ -8,19 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>The Bodyweight Gym Online</title>
+    <link rel="icon" href="./assets/img/Favicon.gif">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <!-- Stylesheets -->
+    <!-- Stylesheets & Scripts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style/styles.css" />
-    <!-- <link rel="stylesheet" href="./assets/style/timerstyle.css" /> -->
+    <link rel="stylesheet" href="./assets/style/timerstyle.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="icon" href="./assets/img/Favicon.gif">
-
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+    <script type="text/javascript" src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+    
 </head>
 
 <body>
@@ -28,13 +31,14 @@
     <div class="modal modal-login modal-fx-fadeInScale">
         <div class="modal-background"></div>
         <div class="modal-content">
+            <br/>
             <img class="center" src="./assets/img/TBWG Logo_1.png" width="400px">
             <div class="center">
                 <br /> Welcome to The Bodyweight Gym Online!<br />Please take a second to fill in some basic
                 info.<br /><br /> Name:
                 <br /><input id="login-name"><br /><br /> City:
                 <br /><input id="login-location"><br /><br />
-                <button id="login-submit" class="button is-link">Continue</button>
+                <button class="button is-link" id="login-submit">Continue</button>
                 <p id="login-error"></p>
             </div>
         </div>

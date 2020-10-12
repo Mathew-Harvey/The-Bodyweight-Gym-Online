@@ -2,28 +2,32 @@
 <html lang="en">
 
 <head>
+
+    <!-- Basic Header Setup -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The Bodyweight Gym Online</title>
+    <link rel="icon" href="./assets/img/Favicon.gif">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap" />
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Stylesheets & Scripts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style/styles.css" />
     <link rel="stylesheet" href="./assets/style/timerstyle.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-
     <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
     <script type="text/javascript" src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
-
-    <link rel="icon" href="./assets/img/Favicon.gif">
-    <title>The Bodyweight Gym Online</title>
 
 </head>
 
 <body>
 
-    <!--Chuck Norris modal-->
+    <!-- Chuck Norris modal -->
     <div class="modal modal-chucknorris modal-fx-fadeInScale">
         <div class="modal-background"></div>
         <div class="modal-content">
@@ -36,10 +40,11 @@
         </div>
     </div>
 
-    <!--Login Modal-->
+    <!-- Login Modal -->
     <div class="modal modal-login modal-fx-fadeInScale">
         <div class="modal-background"></div>
         <div class="modal-content">
+            <br/>
             <img class="center" src="./assets/img/TBWG Logo_1.png" width="400px">
             <div class="center">
                 <br /> Welcome to The Bodyweight Gym Online!<br />Please take a second to fill in some basic
@@ -53,7 +58,7 @@
         <button class="modal-close is-large" aria-label="close"></button>
     </div>
 
-    <!--navbar-->
+    <!-- Navbar -->
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-start">
             <div class="navbar-brand is-spaced">
@@ -124,14 +129,15 @@
             </div>
         </div>
         <div id="videoplayer" class="container"></div>
+        <!-- Spacing for the bottom of the video -->
         <div class="column"></div>
         <div class="column"></div>
         <div class="column"></div>
         <div class="column"></div>
     </div>
+
     <!-- Timer Overlay -->
     <div id="timerEl" class="shownTimer" style="top: 319px; left: 2px;">
-
         <div id="mydivheader">Click here to move</div>
         <div class="countdown">
             <span id="minutes">0</span>:<span id="second">00</span>:<span id="centiSecond">00</span>

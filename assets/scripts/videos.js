@@ -1,4 +1,5 @@
 // The video object
+// Screenshots should be saved at 960x540
 const $theVideos = {
 
     // Video 1
@@ -114,3 +115,5 @@ const $theVideos = {
         "screenshot": "./assets/img/previews/prev14.png"
     }
 }
+
+//screenshot needs to be 960x540
