@@ -130,11 +130,9 @@ function dragElement(elmnt) {
     if (document.getElementById(elmnt.id + "header")) {
         /* if present, the header is where you move the DIV from:*/
         document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-        document.getElementById(elmnt.id + "header").ontouchstart = dragMouseDown;
     } else {
         /* otherwise, move the DIV from anywhere inside the DIV:*/
         elmnt.onmousedown = dragMouseDown;
-        elmnt.ontouchstart = dragMouseDown;
     }
 
     function dragMouseDown(e) {
@@ -144,10 +142,8 @@ function dragElement(elmnt) {
         pos3 = e.clientX;
         pos4 = e.clientY;
         document.onmouseup = closeDragElement;
-        document.ontouchend = closeDragElement;
         // call a function whenever the cursor moves:
         document.onmousemove = elementDrag;
-        document.ontouchmove  = elementDrag;
     }
 
     function elementDrag(e) {
@@ -166,8 +162,6 @@ function dragElement(elmnt) {
     function closeDragElement() {
         /* stop moving when mouse button is released:*/
         document.onmouseup = null;
-        document.ontouchend = null;
-        document.onmouseup = null;
-        document.ontouchmove = null;
+        document.onmousemove = null;
     }
 }
