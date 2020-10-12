@@ -34,7 +34,7 @@
 
 .scrolldown {
     position: absolute;
-    bottom: 45px;
+    bottom: 15%;
     text-align: center;
     color: white;
     z-index: 200;
