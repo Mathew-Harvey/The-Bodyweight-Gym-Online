@@ -25,6 +25,12 @@ $("#login-submit").on("click", function () {
                     name: $("#login-name").val(),
                     location: data.name
                 }
+                
+                // Clear previous
+                localStorage.removeItem("userProfile");
+                localStorage.removeItem("bodyweightgym-history");
+                localStorage.removeItem("bodyweightgym-likes");
+
                 // save object to local storage
                 localStorage.setItem("userProfile", JSON.stringify(profileObj));
                 // update navbar buttons
@@ -41,6 +47,8 @@ $("#login-submit").on("click", function () {
                 } else {
                     $("#weather-txt").html("Train <strong>inside</strong> today");
                 }
+                
+                location.reload();
             },
             error: function () {
                 $("#login-error").text("City not found. Please try again.");

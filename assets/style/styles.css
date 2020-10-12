@@ -134,6 +134,11 @@
     cursor: pointer;
 }
 
+.modal-chucknorris {
+    z-index: 400 !important;
+
+}
+
 .modal-chucknorris .modal-content {
     background-color: white;
     min-height: 350px;
@@ -184,13 +189,6 @@
     padding: 20px;
     max-width: 500px;
     border-radius: 10px;
-}
-
-.modal-chucknorris .modal-content {
-    background-color: white;
-    min-height: 350px;
-    border-radius: 10px;
-    z-index: 400;  
 }
 
 .delete-account-btn {
