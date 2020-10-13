@@ -113,7 +113,7 @@ const $theVideos = {
         "tags": ["Conditioning"],
         "coach": "Ray",
         "screenshot": "./assets/img/previews/prev14.png"
-    }
+    },
     // Video 15
     14: {
 
