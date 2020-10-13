@@ -14,7 +14,7 @@ The styling was completed using the Bulma CSS framework, keeping the design simp
 https://mathew-harvey.github.io/The-Bodyweight-Gym-Online/
 <br /> 
 
-## Link to Deployed Application on Clients website
+## Link to Deployed Application on Client's website
 https://www.thebodyweightgym.net/the-bodyweight-gym-online
 <br /> 
 
