@@ -34,7 +34,7 @@
 
 .scrolldown {
     position: absolute;
-    bottom: 15px;
+    bottom: 15%;
     text-align: center;
     color: white;
     z-index: 200;
@@ -134,6 +134,11 @@
     cursor: pointer;
 }
 
+.modal-chucknorris {
+    z-index: 400 !important;
+
+}
+
 .modal-chucknorris .modal-content {
     background-color: white;
     min-height: 350px;
@@ -176,12 +181,18 @@
 /* Login */
 
 .modal-login {
-    z-index: 300;
+    z-index: 400;    
 }
 
 .modal-login .modal-content {
     background-color: white;
-    padding-bottom: 40px;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.delete-account-btn {
+    color:red;
 }
 
 #login-error {
@@ -190,6 +201,14 @@
 
 .fullheight {
     height: 100%;
+}
+
+.chucknorris-quote {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    z-index: 400;  
 }
 
 #signUp, #logIn {
@@ -237,6 +256,23 @@
 .title, .subtitle {
     color: lightgrey;
     padding: 10px;
+}
+
+.navbar {
+    padding: 5px 5px 5px 5px;
+    margin: 0 auto;
+    width: 100vw;
+    z-index:300;
+}
+
+#navImg {
+    width: 300px;
+    margin: 20px 0 20px 40px;
+}
+
+#signUp,
+#logIn {
+    margin: 20px 0 40px 20px;
 }
 
 .footer {

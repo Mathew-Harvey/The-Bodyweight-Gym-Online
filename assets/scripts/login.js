@@ -1,9 +1,6 @@
 // Checks if user profile exists in local storage
 if (localStorage.getItem("userProfile") === null) {
     // update navbar buttons
-    if (on_index === true) {
-        $(".modal").addClass("is-active")
-    }
     $(".user-profile").css({ display: "none" });
     $(".favorites-btn").css({ display: "none" });
     $(".signup").css({ display: "block" });
@@ -28,10 +25,16 @@ $("#login-submit").on("click", function () {
                     name: $("#login-name").val(),
                     location: data.name
                 }
+                
+                // Clear previous
+                localStorage.removeItem("userProfile");
+                localStorage.removeItem("bodyweightgym-history");
+                localStorage.removeItem("bodyweightgym-likes");
+
                 // save object to local storage
                 localStorage.setItem("userProfile", JSON.stringify(profileObj));
                 // update navbar buttons
-                $(".modal").removeClass("is-active");
+                $(".modal-login").removeClass("is-active");
                 $(".user-profile").css({ display: "block" });
                 $(".signup").css({ display: "none" });
                 $(".userProfile-name").html(`Welcome, <strong>${profileObj.name}</strong>`);
@@ -44,6 +47,8 @@ $("#login-submit").on("click", function () {
                 } else {
                     $("#weather-txt").html("Train <strong>inside</strong> today");
                 }
+                
+                location.reload();
             },
             error: function () {
                 $("#login-error").text("City not found. Please try again.");
@@ -59,16 +64,43 @@ $(document).ready(function () {
     // check if create profile is clicked
     $("#create-profile").on("click", function (event) {
         event.preventDefault();
-        $(".modal").addClass("is-active");
+        $(".modal-login").addClass("is-active");
     })
 
     // check if create profile is clicked
     $(".signup").on("click", function () {
-        $(".modal").addClass("is-active")
+        $(".modal-login").addClass("is-active");
     })
 
     // check close login modal
     $(".modal-close").on("click", function (event) {
-        $(".modal").removeClass("is-active");
+        $(".modal-login").removeClass("is-active");
     })
+
+    // check if account button is clicked
+    $('.account-dropdown').on('click',function(event){
+        event.preventDefault();
+        if($(this).attr('data-click-state') == 1) {
+            $(this).attr('data-click-state', 0);
+            $(".account-dropdown").addClass("is-active");
+          }
+        else {
+          $(this).attr('data-click-state', 1);
+          $(".account-dropdown").removeClass("is-active");
+        }
+    });
+
+    // check if new account button is clicked
+    $(".new-account-btn").on("click", function() {
+        $(".modal-login").addClass("is-active");
+    })
+
+    // check if delete account button is clicked
+    $(".delete-account-btn").on("click", function() {
+        localStorage.removeItem("userProfile");
+        localStorage.removeItem("bodyweightgym-history");
+        localStorage.removeItem("bodyweightgym-likes");
+        location.reload();
+    })
+
 })
