@@ -114,6 +114,14 @@ const $theVideos = {
         "coach": "Ray",
         "screenshot": "./assets/img/previews/prev14.png"
     }
+    // Video 15
+    14: {
+
+        "link": "player.vimeo.com/video/467702005",
+        "tags": ["Conditioning"],
+        "coach": "Ray",
+        "screenshot": "./assets/img/previews/prev15.png"
+    }
 }
 
 //screenshot needs to be 960x540
