@@ -81,7 +81,7 @@ $(document).ready(function () {
             },
             error: function () {
 
-                $chuckJoke = "Chuck Norris says GET BACK TO WORK!";
+                $chuckJoke = "GET BACK TO WORK!";
 
                 // Check to see if both API calls have returned
                 addChuck();
