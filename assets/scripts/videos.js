@@ -157,59 +157,135 @@ const $theVideos = {
     // Video 20
     19: {
 
-    "link": "player.vimeo.com/video/474522781",
-    "tags": ["Strength"],
-    "coach": "Corey",
-    "screenshot": "./assets/img/previews/prev20.png"
+        "link": "player.vimeo.com/video/474522781",
+        "tags": ["Strength"],
+        "coach": "Corey",
+        "screenshot": "./assets/img/previews/prev20.png"
     },
     // Video 21
     20: {
- 
-     "link": "player.vimeo.com/video/474523729",
-     "tags": ["Strength"],
-     "coach": "Maisie",
-     "screenshot": "./assets/img/previews/prev21.png"
+
+        "link": "player.vimeo.com/video/474523729",
+        "tags": ["Strength"],
+        "coach": "Maisie",
+        "screenshot": "./assets/img/previews/prev21.png"
     },
     // Video 22
     21: {
- 
-     "link": "player.vimeo.com/video/474524653",
-     "tags": ["Conditioning"],
-     "coach": "Ray",
-     "screenshot": "./assets/img/previews/prev22.png"
+
+        "link": "player.vimeo.com/video/474524653",
+        "tags": ["Conditioning"],
+        "coach": "Ray",
+        "screenshot": "./assets/img/previews/prev22.png"
     },
     // Video 23
     22: {
- 
-     "link": "player.vimeo.com/video/474525944",
-     "tags": ["Handstands"],
-     "coach": "Oscar",
-     "screenshot": "./assets/img/previews/prev23.png"
+
+        "link": "player.vimeo.com/video/474525944",
+        "tags": ["Handstands"],
+        "coach": "Oscar",
+        "screenshot": "./assets/img/previews/prev23.png"
     },
     // Video 24
     23: {
- 
-     "link": "player.vimeo.com/video/474526864",
-     "tags": ["Mobility"],
-     "coach": "Maisie",
-     "screenshot": "./assets/img/previews/prev24.png"
+
+        "link": "player.vimeo.com/video/474526864",
+        "tags": ["Mobility"],
+        "coach": "Maisie",
+        "screenshot": "./assets/img/previews/prev24.png"
     },
     // Video 25
     24: {
- 
-     "link": "player.vimeo.com/video/474528059",
-     "tags": ["Strength"],
-     "coach": "Corey",
-     "screenshot": "./assets/img/previews/prev25.png"
+
+        "link": "player.vimeo.com/video/474528059",
+        "tags": ["Strength"],
+        "coach": "Corey",
+        "screenshot": "./assets/img/previews/prev25.png"
     },
     // Video 26
     25: {
- 
-     "link": "player.vimeo.com/video/474529245",
-     "tags": ["Strength"],
-     "coach": "Mikhail",
-     "screenshot": "./assets/img/previews/prev26.png"
-    }               
+
+        "link": "player.vimeo.com/video/474529245",
+        "tags": ["Strength"],
+        "coach": "Mikhail",
+        "screenshot": "./assets/img/previews/prev26.png"
+    },
+    // Video 27
+    26: {
+
+        "link": "player.vimeo.com/video/482482396",
+        "tags": ["Strength"],
+        "coach": "Kelvin",
+        "screenshot": "./assets/img/previews/prev27.png"
+    },
+    // Video 28
+    27: {
+
+        "link": "player.vimeo.com/video/482487070",
+        "tags": ["Strength"],
+        "coach": "Maisie",
+        "screenshot": "./assets/img/previews/prev28.png"
+    },
+    // Video 29
+    28: {
+
+        "link": "player.vimeo.com/482491377",
+        "tags": ["Strength"],
+        "coach": "Maisie",
+        "screenshot": "./assets/img/previews/prev29.png"
+    },
+    // Video 30
+    29: {
+
+        "link": "player.vimeo.com/482495260",
+        "tags": ["Conditioning"],
+        "coach": "Ray",
+        "screenshot": "./assets/img/previews/prev30.png"
+    },
+
+    // Video 31
+    30: {
+
+        "link": "player.vimeo.com/482500178",
+        "tags": ["Strength"],
+        "coach": "Oscar",
+        "screenshot": "./assets/img/previews/prev31.png"
+    },
+    // Video 32
+    31: {
+
+        "link": "player.vimeo.com/482503820",
+        "tags": ["Mobility"],
+        "coach": "Maisie",
+        "screenshot": "./assets/img/previews/prev32.png"
+    },
+    // Video 33
+    32: {
+
+        "link": "player.vimeo.com/482506081",
+        "tags": ["Handstands"],
+        "coach": "Corey",
+        "screenshot": "./assets/img/previews/prev33.png"
+    },
+    // Video 34
+    33: {
+
+        "link": "player.vimeo.com/482510361",
+        "tags": ["Strength"],
+        "coach": "Corey",
+        "screenshot": "./assets/img/previews/prev34.png"
+    },
+    // Video 35
+    34: {
+
+        "link": "player.vimeo.com/482514394",
+        "tags": ["Strength"],
+        "coach": "Corey",
+        "screenshot": "./assets/img/previews/prev35.png"
+    },
+
+
+
 }
 
 //screenshot needs to be (960x540) / 2
